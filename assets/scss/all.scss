@@ -41,6 +41,9 @@
 // Helpers
 @import "bootstrap/scss/helpers";
 
+// utilities
+@import "./utils/utilities";
+
 // Utilities
 @import "bootstrap/scss/utilities/api";
 
@@ -52,6 +55,7 @@
 @import './components/buttons';
 @import './components/navigation';
 @import './components/tags';
+@import './components/flags';
 
 
 @import './layout/header.scss';
