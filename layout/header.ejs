@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg shadow sticky-top w-100">
+    <div class="container-xl">
+        <a class="navbar-brand me-lg-12" href="#">
+            <img src="/assets/images/logo.svg" alt="親子好趣處" class="d-none d-lg-block">
+            <img src="/assets/images/logo-mini.svg" alt="親子好趣處" class="d-lg-none">
+            <h1>親子好趣處 FunFamilyMap</h1>
+        </a>
+        <form id="searchForm" class="px-4 position-relative rounded-pill me-xl-auto ms-auto" role="search">
+            <span class="material-symbols-outlined ">search</span>
+            <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
+                aria-label="Search">
+        </form>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mb-lg-0 gap-lg-6 me-lg-6">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">景點列表</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">景點開拓者</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">新增景點</a>
+                </li>
+            </ul>
+            <!-- <div class="text-end ">
+                <a href="" class="btn rounded-pill btn-sm btn-white me-4">登入</a>
+                <a href="" class="btn rounded-pill btn-sm btn-primary">註冊</a>
+            </div> -->
+
+        </div>
+        <div class="dropdown text-end ps-lg-12">
+            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/assets/images/user-avatar.jpg" alt="mdo" width="48" height="48" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
+                <li>
+                    <div class="d-flex align-items-center py-6 px-8">
+                        <div class="flex-shrink-0">
+                            <img src="/assets/images/user-avatar.jpg" class="rounded-circle" alt="user-avatar"
+                                width="60" height="60">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6>陳大廷</h6>
+                            <p class="text-gray-600">userName@mail.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <hr class="dropdown-divider mt-0 mb-4">
+                </li>
+                <li><a class="dropdown-item d-inline-flex align-items-center link-grap-600 gap-3 py-4 px-8"
+                        href="#"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
+                <li><a class="dropdown-item d-inline-flex align-items-center link-grap-600 gap-3 py-4 px-8"
+                        href="#"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
+                <li><a class="dropdown-item d-inline-flex align-items-center link-grap-600 gap-3 py-4 px-8"
+                        href="#"><span class="material-symbols-outlined">star</span>景點評價</a></li>
+                <li><a class="dropdown-item d-inline-flex align-items-center link-grap-600 gap-3 py-4 px-8"
+                        href="#"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
+                <li>
+                    <hr class="dropdown-divider my-4">
+                </li>
+                <li><a class="dropdown-item  d-inline-flex align-items-center link-grap-600 gap-3 py-4 px-8"
+                        href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

@@ -1,0 +1,43 @@
+.navbar{
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.navbar-brand {
+    h1 {
+        position: absolute;
+        opacity: 0;
+        font-size: 0;
+    }
+
+    img {
+        height: 60px;
+
+        @include media-breakpoint-up(md) {
+            height: 48px;
+        }
+    }
+}
+
+#searchForm {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: $light-gray;
+    border: none;
+
+    &:focus-within {
+        border: 1px solid $primary;
+        box-shadow: 0 0 5px $primary;
+    }
+
+    .form-control {
+        margin-left: 12px;
+        background-color: transparent;
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
