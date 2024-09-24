@@ -85,8 +85,13 @@
     --bs-btn-hover-color: var(--bs-gray-600);
     --bs-btn-hover-bg: var(--bs-normal-gray);
     --bs-btn-hover-border-color: var(--bs-gray-600);
-    --bs-btn-active-color: var(--bs-gray-600);
+    --bs-btn-active-color: var(--bs-dark);
     --bs-btn-active-bg: var(--bs-white);
     --bs-btn-active-border-color: var(--bs-gray-600);
 }
 
+
+.btn-dark-gray{
+    --bs-btn-color:var(--bs-gray-600);
+    --bs-btn-hover-color: var(--bs-gray-600);
+}
