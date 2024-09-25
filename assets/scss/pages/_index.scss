@@ -16,6 +16,13 @@
             padding-right: 45px;
             padding-top: 40px;
             padding-bottom: 40px;
+            transform: translateX(44px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: 44px;
+            padding-right: 30px;
+            transform: translateX(34px);
         }
 
         &::before {
@@ -24,8 +31,6 @@
             bottom: -2px;
             right: 100%;
             aspect-ratio: 112 / 304;
-            // width: 112px;
-            // height: 304px;
             background-image: url(/assets/images/home/deco-lighthouse.svg);
             background-repeat: no-repeat;
             background-position: center;
@@ -34,6 +39,10 @@
             @include media-breakpoint-down(lg) {
                 width: 25%;
 
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 30%;
             }
 
         }
@@ -125,7 +134,7 @@
     border: 3px solid $primary;
     border-radius: 32px;
     transition: box-shadow 0.5s;
-   
+
 
     .card-body {
         padding: 32px;
@@ -146,7 +155,7 @@
     }
 }
 
-.bg-grid-paper{
+.bg-grid-paper {
     background-image: url(/assets/images/home/grid-paper.svg);
     background-color: #fff;
     background-size: 10%;
