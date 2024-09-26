@@ -60,7 +60,10 @@
 @import './components/swiper';
 
 
-@import './layout/header.scss';
+@import './layout/layout';
 
-@import './layout/footer.scss';
+@import './layout/header';
+@import './layout/footer';
+
 @import './pages/index';
+@import './pages/tourist-spots';
