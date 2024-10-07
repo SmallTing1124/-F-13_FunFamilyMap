@@ -1,5 +1,6 @@
 .search-bar__area {
     background: linear-gradient(to bottom, $white 50%, $normal-gray 50%);
+
     @include media-breakpoint-down(lg) {
         padding-bottom: 10%;
     }
@@ -29,12 +30,12 @@
         margin: 0;
 
         @include media-breakpoint-up(lg) {
-           
+
             border-radius: 50%;
             top: 50%;
             transform: translateY(-50%);
             right: 0;
-            
+
             width: 80px;
             height: 80px;
             padding: 0;
@@ -46,6 +47,47 @@
             top: calc(100% - 25px);
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+}
+
+
+.filterOptions_area {
+    width: 375px;
+}
+
+.filterOptions_footer {
+    border-top: 1px solid #eee;
+    padding: 12px;
+}
+
+.filterOptions_content {
+    width: 100%;
+    max-height: 336px;
+    overflow: hidden;
+    display: inline-flex;
+    text-align: center;
+    
+
+    .cityGroup {
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 50%;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .districtGroup {
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 50%;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 }

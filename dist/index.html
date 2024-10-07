@@ -9,8 +9,8 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>親子好趣處 FunFamilyMap</title>
-  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-b7288c65.js"></script>
-  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-51fc4473.css">
+  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-7acb8cf1.js"></script>
+  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-79c19a0b.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
                 <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
                     <li class="nav-item">
-                        <a class="nav-link text-center" href="#">景點列表</a>
+                        <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-center" href="#">景點開拓者</a>
@@ -109,10 +109,10 @@
             <div class="tab-content  w-100 h-100" id="nav-tabContent">
                 <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
                     aria-labelledby="nav-menu-group" tabindex="0">
-                    <div class="d-flex justify-content-center flex-column h-100 py-6">
+                    <div class="d-flex flex-column h-100 py-6">
                         <ul class="navbar-nav mb-0 row-gap-6">
                             <li class="nav-item">
-                                <a class="nav-link text-center" href="#">景點列表</a>
+                                <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center" href="#">景點開拓者</a>
@@ -121,7 +121,7 @@
                                 <a class="nav-link text-center" href="#">新增景點</a>
                             </li>
                         </ul>
-                        <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top pt-6">
+                        <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
                             <a href=""
                                 class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
                             <a href=""
@@ -175,16 +175,17 @@
     </div>
 </nav>
     <section class="banner-area">
-      <img src="/F-13_FunFamilyMap/assets/banner-bg-cc2e7cce.svg" width="100%">
+      <img src="/F-13_FunFamilyMap/assets/banner-bg-cc2e7cce.svg" width="100%" class="d-none d-lg-block">
+      <img src="/F-13_FunFamilyMap/assets/banner_bg_mobile-4c47760a.jpg" width="100%" class="d-lg-none">
     </section>
-    <section class="page01 pb-17 pt-14">
+    <section class="page01 pt-14 ">
       <div class="container-xl">
         <div class="text-center">
-          <h2 class="font-NaniFont text-primary page-title fs-lg-1 fs-sm-2 fs-3">
+          <h2 class="font-NaniFont text-primary page-title fs-1">
             週末不知道<span class="d-block d-lg-inline">帶小孩</span><span class="d-block">去哪裡嗎？</span>
           </h2>
         </div>
-        <div class="p-lg-8 p-6 border border-primary border-3 rounded-5">
+        <div class="p-lg-8 p-6 border border-primary border-3 rounded-5 bg-white">
           <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 gy-6">
             <div class="col">
               <div class="card tag-card rounded-4 overflow-hidden border-0">
@@ -221,9 +222,14 @@
           </div>
         </div>
       </div>
+      <div class="deco-vehicle position-relative pt-lg-18 pt-16">
+        <img src="/F-13_FunFamilyMap/assets/deco_taxi-c88974a7.svg" width="138" class="position-absolute bottom-0">
+        
+        <img src="/F-13_FunFamilyMap/assets/deco_bus_move-59d8224b.svg" width="172" class="position-absolute bottom-0">
+      </div>
     </section>
-    <section class="page02 bg-normal-gray py-15">
-      <div class="container">
+    <section class="page02 bg-normal-gray py-lg-15 py-12">
+      <div class="container-xl">
         <div class="text-center">
           <div class="page-title bg-deco-msg pb-13">
             <h2 class="font-NaniFont text-secondary fs-lg-1 fs-2">
@@ -231,9 +237,16 @@
             </h2>
             <p class="text-white fs-5">從幼兒到小學生都有適合的景點</p>
           </div>
-          <img src="/F-13_FunFamilyMap/assets/deco-cat-9c51b2e6.svg" width="315" style="transform: translateY(-48px);" class="mw-100">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-5">
+              <img src="/F-13_FunFamilyMap/assets/deco-cat-db8c42fd.svg" width="315" style="transform: translateY(-48px);"
+                class="mw-100">
+            </div>
+          </div>
         </div>
-        
+
+        <!-- 電腦版景點輪播 -->
+        <div class="d-lg-block d-none position-relative px-14">
           <div class="swiper swiper-col-3">
             <div class="swiper-wrapper">
               <!-- swiper-slide -->
@@ -322,7 +335,6 @@
                 </a>
               </div>
             </div>
-          
           </div>
           <div class="swiper-button-next swiper-col-3-button-next">
             <span class="material-symbols-outlined">arrow_right</span>
@@ -330,44 +342,149 @@
           <div class="swiper-button-prev swiper-col-3-button-prev">
             <span class="material-symbols-outlined">arrow_left</span>
           </div>
-        <div class="mt-15 text-center">
-          <a href="#" class="btn btn-primary">查看更多景點<span class="material-symbols-outlined">arrow_forward</span></a>
         </div>
 
-      </div>
-    </section>
-    <section class="bg-secondary pt-14 pb-16">
-      <div class="container bg-grid-paper rounded-5 py-14">
-        <div class="row">
-          <div class="col">
-            <div class="text-center">
-              <h2 class="font-NaniFont text-primary fs-1 mb-12">景點蒐集計畫</h2>
-              <p class="mb-12">讓親子旅遊更簡單<br>和我們一起整理親子景點</p>
-              <a href="#" class="btn btn-highligh btn-lg">
-                <span class="icon-logo-mini"></span>JOIN US
+
+        <!-- 手機版景點清單列 -->
+        <div class="d-lg-none">
+          <div class="row row-cols-md-2 row-cols-1 g-4">
+            <!-- col -->
+            <div class="col">
+              <a href="#" class="d-block">
+                <div class="card attraction-card">
+                  <div class="card-body">
+                    <img src="/F-13_FunFamilyMap/assets/attraction_1-31909a78.jpg" class="rounded-top" alt="">
+                    <h3 class="fs-lg-4 fs-5 fw-bold mb-4">新竹市立動物園</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                      <li class="d-flex gap-2 align-items-center "><span
+                          class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市東區</li>
+                      <li class="d-flex gap-2 align-items-center"><span
+                          class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡 1 歲</li>
+                    </ul>
+                    <div class="text-end">
+                      <div href="#" class="d-inline-flex align-items-center gap-2 fw-bold text-primary">查看詳情<span
+                          class="material-symbols-outlined">arrow_forward</span></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- col -->
+            <div class="col">
+              <a href="#" class="d-block ">
+                <div class="card attraction-card">
+                  <div class="card-body">
+                    <img src="/F-13_FunFamilyMap/assets/attraction_2-cbd7c111.jpg" class="rounded-top" alt="">
+                    <h3 class="fs-lg-4 fs-5 fw-bold mb-4">廢物媽媽育兒農場</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                      <li class="d-flex gap-2 align-items-center "><span
+                          class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市 香山區</li>
+                      <li class="d-flex gap-2 align-items-center"><span
+                          class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡 1 歲</li>
+                    </ul>
+                    <div class="text-end">
+                      <div href="#" class="d-inline-flex align-items-center gap-2 fw-bold text-primary">查看詳情<span
+                          class="material-symbols-outlined">arrow_forward</span></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- col -->
+            <div class="col">
+              <a href="#" class="d-block">
+                <div class="card attraction-card">
+                  <div class="card-body">
+                    <img src="/F-13_FunFamilyMap/assets/attraction_3-e4b38d96.jpg" class="rounded-top" alt="">
+                    <h3 class="fs-lg-4 fs-5 fw-bold mb-4">春室 Glass Studio</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                      <li class="d-flex gap-2 align-items-center "><span
+                          class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市 東區</li>
+                      <li class="d-flex gap-2 align-items-center"><span
+                          class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡 1 歲</li>
+                    </ul>
+                    <div class="text-end">
+                      <div href="#" class="d-inline-flex align-items-center gap-2 fw-bold text-primary">查看詳情<span
+                          class="material-symbols-outlined">arrow_forward</span></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- col -->
+            <div class="col">
+              <a href="#" class="d-block">
+                <div class="card attraction-card">
+                  <div class="card-body">
+                    <img src="/F-13_FunFamilyMap/assets/attraction_4-cfe79e9a.jpg" class="rounded-top" alt="">
+                    <h3 class="fs-lg-4 fs-5 fw-bold mb-4">台北市立兒童新樂園</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                      <li class="d-flex gap-2 align-items-center "><span
+                          class="iconify-rivet-icons--map-pin-solid text-secondary"></span>台北市 士林區</li>
+                      <li class="d-flex gap-2 align-items-center"><span
+                          class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡 1 歲</li>
+                    </ul>
+                    <div class="text-end">
+                      <div href="#" class="d-inline-flex align-items-center gap-2 fw-bold text-primary">查看詳情<span
+                          class="material-symbols-outlined">arrow_forward</span></div>
+                    </div>
+                  </div>
+                </div>
               </a>
             </div>
           </div>
         </div>
+
+        <div class="mt-lg-15 mt-12 text-center">
+          <a href="tourist-spots.html" class="btn btn-primary">查看更多景點<span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
       </div>
     </section>
-    <section class="contact-area bg-primary py-15 text-center">
-      <img src="/F-13_FunFamilyMap/assets/contact-logo-b31ef8c6.svg" width="338" class="mw-100">
-    </section>
-    <footer class="bg-primary py-12">
-<div class="container-xl">
-    <div class="row justify-content-between ">
-        <div class="col-lg-6 text-lg-start text-center">
-            <ul class="list-unstyled d-inline-flex align-items-center text-white ">
-                <li><a href="" class="d-block py-2 link-white">服務政策</a></li><span class="mx-6">｜</span>
-                <li><a href="" class="d-block py-2 link-white">隱私條款</a></li>
-            </ul>
+    <section class="bg-secondary">
+      <div class="container-xl position-relative">
+        <div class="row">
+          <div class="col">
+            <div class="bg-grid-paper rounded-5 py-lg-14 pt-12 pb-17 position-relative mt-lg-14 mb-lg-16 my-12">
+              <img src="/F-13_FunFamilyMap/assets/deco_map-d0b1ce7b.svg" width="264" class="mx-100 position-absolute top-0 mt-8 d-lg-block d-none">
+              <div class="text-center">
+                <h2 class="font-NaniFont text-primary fs-1  mb-lg-12 mb-6">景點蒐集計畫</h2>
+                <p class="mb-lg-12 mb-6">讓親子旅遊更簡單<br>和我們一起整理親子景點</p>
+                <a href="#" class="btn btn-highligh btn-lg">
+                  <span class="icon-logo-mini"></span>JOIN US
+                </a>
+              </div>
+              
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 text-lg-end  text-center text-white"><span>© 2024 親子好趣處 FunFamilyMap. All rights reserved.</span></div>
+        <img src="/F-13_FunFamilyMap/assets/deco_idea-4d19a739.svg" width="373" class="mx-100 position-absolute bottom-0 end-0 d-lg-block d-none">
+        <img src="/F-13_FunFamilyMap/assets/deco_idea-4d19a739.svg" width="190" class="mx-100 position-absolute start-50  translate-middle-x bottom-0 end-0 d-lg-none">
+      </div>
+    </section>
+    <footer class="bg-primary py-lg-12 py-6">
+    <div class="mb-lg-12 mb-6">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-8">
+                    <img src="/F-13_FunFamilyMap/assets/contact-logo-b31ef8c6.svg" width="338" class="mw-100">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</footer>
-      
+    <div class="container-xl">
+        <div class="row justify-content-between ">
+            <div class="col-lg-6 text-lg-start text-center">
+                <ul class="list-unstyled d-inline-flex align-items-center text-white mb-lg-0 mb-2">
+                    <li><a href="" class="d-block py-2 link-white">服務政策</a></li><span class="mx-6">｜</span>
+                    <li><a href="" class="d-block py-2 link-white">隱私條款</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-lg-end  text-center text-white"><span class="fs-lg-6 fs-7">© 2024 親子好趣處
+                    FunFamilyMap. All rights reserved.</span></div>
+        </div>
+    </div>
+</footer>    
 </body>
 
 </html>
