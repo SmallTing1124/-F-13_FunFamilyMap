@@ -31,6 +31,15 @@
         flex-wrap: nowrap;
     }
 }
+.swiper-grid-pagination{
+    position: relative;
+    margin-top:24px;
+    z-index: 999;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: $primary;
+}
 
 .leaderboard {
     padding-top: 72px;
@@ -40,6 +49,7 @@
     border-color: $primary;
     border-width: 3px;
     border-radius: 32px;
+ 
 
     &::before {
         content: '';
@@ -56,6 +66,14 @@
         overflow: hidden;
         border-top: 32px solid $gold;
         border-radius: 31px;
+        padding-top: 72px;
+
+        .avatar-img {
+            img {
+                height: 96px !important;
+                width: 96px !important;
+            }
+        }
 
     }
 
@@ -85,7 +103,10 @@
     &.gold {
         .card-body {
             border-top: 32px solid $gold;
-            padding-top: 128px;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: 128px;
+            }
         }
 
         &::before {
@@ -96,8 +117,10 @@
     &.silver {
         .card-body {
             border-top: 32px solid $silver;
-            padding-top: 96px;
 
+            @include media-breakpoint-down(lg) {
+                padding-top: 96px;
+            }
         }
 
         &::before {
@@ -108,7 +131,10 @@
     &.copper {
         .card-body {
             border-top: 32px solid $copper;
-            padding-top: 64px;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: 64px;
+            }
         }
 
         &::before {
@@ -117,7 +143,14 @@
     }
 }
 
-td {
-    padding-top: 28px !important;
-    padding-bottom: 28px !important;
+
+.table > :not(caption) > * > *{
+    @include media-breakpoint-down(lg) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.table-responsive{
+    white-space:nowrap;
 }
