@@ -18,7 +18,7 @@
       <div class="container-xl">
         <div class="d-flex flex-column-reverse flex-lg-column">
           <div class="mobileTitle d-lg-none">
-            <div class="d-flex justify-content-between mb-7">
+            <div class="d-flex flex-column justify-content-between mt-5 mb-3">
               <div class="touristTitle d-flex">
                 <img src="/assets/images/tourist/Open.svg" alt="" />
                 <div class="d-flex flex-column ms-3">
@@ -30,7 +30,7 @@
                   </div>
                 </div>
               </div>
-              <div class="toggles d-flex align-items-end mt-7 mt-md-0">
+              <div class="toggles d-flex align-self-start ms-auto mt-3 mt-md-0">
                 <input
                   type="checkbox"
                   class="btn-check"
@@ -237,8 +237,8 @@
               </button>
             </div>
           </nav>
-          <p class="align-items-md-end text-gray-600">
-            <span class="material-symbols-outlined me-2">edit</span
+          <p class="align-items-md-end text-gray-600 ms-auto">
+            <span class="material-symbols-outlined me-2 align-bottom">edit</span
             >修正景點資訊
           </p>
         </div>
@@ -386,14 +386,13 @@
               <div class="col-12 col-lg-4 pt-12">
                 <h4>景點標籤</h4>
                 <div class="tags pcTags d-none d-lg-block pt-5">
-                  <ul class="list-inline d-flex flex-row gap-1">
+                  <ul class="list-inline d-flex flex-row flex-wrap gap-2">
                     <li>
                       <a class="btn tag" href="#" role="button">
                         <span class="text-primary">#</span>
                         探索學習
                       </a>
                     </li>
-                    <li></li>
                       <a class="btn tag" href="#" role="button">
                         <span class="text-primary">#</span>
                         動物園
@@ -561,7 +560,7 @@
       </div>
     </div>
     <!-- 通知 -->
-    <!-- <div id="liveAlertPlaceholder"></div> -->
+    <div id="liveAlertPlaceholder"></div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

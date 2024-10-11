@@ -1,6 +1,5 @@
 // import Swiper bundle with all modules installed
 import Swiper from "swiper/bundle";
-
 // import styles bundle
 import "swiper/css/bundle";
 
@@ -34,14 +33,28 @@ const tourstInfoSwiper = new Swiper(".tourist-img-swiper", {
   // },
 });
 //電腦版 喜愛景點、想去景點、打卡按鈕
+let isFavoriteClicked = false;
+let isWantToGoClicked = false;
+let isCheckClicked = false;
 const pcBtnCheck1 = document.getElementById("pc-btn-check");
 const pcBtnCheck2 = document.getElementById("pc-btn-check-2");
 const pcBtnCheck3 = document.getElementById("pc-btn-check-3");
-pcBtnCheck1.addEventListener("click", function () {
-  console.log("pcbtn1click");
-});
+if (isFavoriteClicked === false) {
+  pcBtnCheck1.addEventListener("click", function (message, type) {
+    console.log("pcbtn1click");
+    isFavoriteClicked = !isFavoriteClicked;
+
+    // console.log(isFavoriteClicked);
+  });
+} else if (isFavoriteClicked === true) {
+  pcBtnCheck1.addEventListener("click", function () {
+    console.log("pcbtn1NoClick");
+    isFavoriteClicked = !isFavoriteClicked;
+  });
+}
 pcBtnCheck2.addEventListener("click", function () {
   console.log("pcbtn2click");
+  console.log(isFavoriteClicked);
 });
 pcBtnCheck3.addEventListener("click", function () {
   console.log("pcbtn3click");
