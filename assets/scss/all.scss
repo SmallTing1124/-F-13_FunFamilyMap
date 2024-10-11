@@ -47,24 +47,23 @@
 // Utilities
 @import "bootstrap/scss/utilities/api";
 
+@import "./base/base.scss";
+@import "./base/fontStyle.scss";
 
-@import './base/base.scss';
-@import './base/fontStyle.scss';
+@import "./components/icon";
+@import "./components/buttons";
+@import "./components/navigation";
+@import "./components/tags";
+@import "./components/flags";
+@import "./components/form";
+@import "./components/swiper";
 
-@import './components/icon';
-@import './components/buttons';
-@import './components/navigation';
-@import './components/tags';
-@import './components/flags';
-@import './components/form';
-@import './components/swiper';
+@import "./layout/layout";
 
+@import "./layout/header";
+@import "./layout/footer";
 
-@import './layout/layout';
-
-@import './layout/header';
-@import './layout/footer';
-
-@import './pages/index';
-@import './pages/tourist-spots';
-@import './pages/contributors';
+@import "./pages/index";
+@import "./pages/tourist-spots";
+@import "./pages/tourist-info";
+@import "./pages/contributors";

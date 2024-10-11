@@ -1,0 +1,49 @@
+.touristTitle {
+  p {
+    color: $gray-600;
+  }
+}
+.tourist-info-swiper {
+  position: relative;
+  .swiper-button-next {
+    right: -20px;
+  }
+  .swiper-button-prev {
+    left: -20px;
+  }
+}
+
+.title {
+  top: -30px;
+  left: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 238px;
+  height: 64px;
+  font-size: $h2-font-size;
+  color: $primary;
+  background-image: url(/assets/images/tourist/title-bg.png);
+  vertical-align: middle;
+}
+
+.tourist-information {
+  background-color: #ffffff;
+  background-image: url(/assets/images/tourist/grid-paper.png);
+  background-size: contain;
+}
+@media screen and (max-width: 991px) {
+  .tourist-info-swiper {
+    position: relative;
+    .swiper-button-next {
+      right: 20px;
+    }
+    .swiper-button-prev {
+      left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 488px) {
+  .nav-underline .nav-link {
+    padding: 16px 20px;
+  }
+}
