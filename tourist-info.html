@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/F-13_FunFamilyMap/assets/favicon-24d8a4a0.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>親子好趣處 FunFamilyMap</title>
+    <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-a47b9010.js"></script>
+    <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-28755145.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg shadow sticky-top w-100 py-lg-4 py-2">
+    <div class="container-xl">
+        <div class="d-flex flex-nowrap  align-items-center w-100 position-relative">
+            <a class="navbar-brand me-xl-12 me-3" href="index.html">
+                <img src="/F-13_FunFamilyMap/assets/logo-67eb97f1.svg" alt="親子好趣處" class="d-none d-lg-block">
+                <img src="/F-13_FunFamilyMap/assets/logo-mini-bbcecf91.svg" alt="親子好趣處" class="d-lg-none">
+                <h1>親子好趣處 FunFamilyMap</h1>
+            </a>
+
+            <form id="searchForm" class="px-lg-4 px-2 rounded-pill ms-lg-0 ms-auto" role="search">
+                <label for="searchInput" class="d-flex align-items-center">
+                    <span class="material-symbols-outlined">search</span>
+                </label>
+                <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
+                    aria-label="Search">
+            </form>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" data-bs-auto-close="outside"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
+                <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">新增景點</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center column-gap-lg-lg-4 column-gap-1">
+                    <a href="" class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                    <a href="" class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" alt="mdo" width="48" height="48"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
+                        <li>
+                            <div class="d-flex align-items-center py-6 px-8">
+                                <div class="flex-shrink-0">
+                                    <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle" alt="user-avatar"
+                                        width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>陳大廷</h6>
+                                    <p class="text-gray-600">userName@mail.com</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider mt-0 mb-4">
+                        </li>
+                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                                href="user-maps.html"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
+                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                                href="#"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
+                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                                href="#"><span class="material-symbols-outlined">star</span>景點評價</a></li>
+                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                                href="#"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
+                        <li>
+                            <hr class="dropdown-divider my-4">
+                        </li>
+                        <li><a class="dropdown-item  d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                                href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-lg-none">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="nav nav-underline nav-justified w-100 column-gap-0 border-top" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active" id="nav-menu-group" data-bs-toggle="tab" data-bs-target="#nav-menu"
+                        type="button" role="tab" aria-controls="nav-menu" aria-selected="true">探索</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="nav-member-group" data-bs-toggle="tab" data-bs-target="#nav-member"
+                        type="button" role="tab" aria-controls="nav-member" aria-selected="false">關於我</button>
+                </li>
+            </ul>
+            <div class="tab-content  w-100 h-100" id="nav-tabContent">
+                <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
+                    aria-labelledby="nav-menu-group" tabindex="0">
+                    <div class="d-flex flex-column h-100 py-6">
+                        <ul class="navbar-nav mb-0 row-gap-6">
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#">新增景點</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
+                            <a href=""
+                                class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                            <a href=""
+                                class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane h-100 fade" id="nav-member" role="tabpanel" aria-labelledby="nav-member-group"
+                    tabindex="0">
+                    <div class="h-100">
+                        <ul class="navbar-nav mb-0">
+                            <li>
+                                <div class="d-flex align-items-center py-6 px-8 border-bottom">
+                                    <div class="flex-shrink-0">
+                                        <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle"
+                                            alt="user-avatar" width="60" height="60">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6>陳大廷</h6>
+                                        <p class="text-gray-600">userName@mail.com</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-maps.html">
+                                    <span class="material-symbols-outlined">map</span>我的地圖</a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
+                                    <span class="material-symbols-outlined">favorite</span>喜愛景點</a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
+                                    <span class="material-symbols-outlined">star</span>景點評價</a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
+                                    <span class="material-symbols-outlined">settings</span>會員資料</a>
+                            </li>
+                            <li>
+                                <a class=" d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100"
+                                href="#"><span class="material-symbols-outlined">logout</span>登出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>    <section class="pt-lg-15 pt-12">
+      <div class="container-xl">
+        <div class="d-flex flex-column-reverse flex-lg-column">
+          <div class="mobileTitle d-lg-none">
+            <div class="d-flex flex-column justify-content-between mt-5 mb-3">
+              <div class="touristTitle d-flex">
+                <img src="/F-13_FunFamilyMap/assets/Open-6813d4ea.svg" alt="" />
+                <div class="d-flex flex-column ms-3">
+                  <h1 class="fs-4 fs-lg-1">新竹市立動物園</h1>
+                  <div class="d-flex flex-row align-items-center">
+                    <span class="d-none d-lg-inline btn-lg btn-secondary flag">經營中</span>
+                    <span class="d-lg-none btn btn-secondary flag">經營中</span>
+                    <p class="ps-4">新竹市 東區</p>
+                  </div>
+                </div>
+              </div>
+              <div class="toggles d-flex align-self-start ms-auto mt-3 mt-md-0">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="mb-btn-check"
+                  autocomplete="off"
+                />
+                <label class="btn btn-light btn-sm rounded-pill border-0" for="mb-btn-check">
+                 
+                  <span class="isUnchecked iconify-favorite_add"></span>
+                  <span class="isChecked material-symbols-outlined icon-filled"
+                    >favorite</span
+                  >
+                </label>
+    
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="mb-btn-check-2"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-light btn-sm rounded-pill mx-4 border-0"
+                  for="mb-btn-check-2"
+                >
+                  <span
+                    class="isUnchecked iconify-fbookmark_add material-symbols-outlined"
+                    >bookmark_add</span
+                  >
+                  <span class="isChecked material-symbols-outlined">bookmark</span>
+                </label>
+              </div>
+            </div>
+            <div class="toggles d-flex">
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="mb-btn-check-3"
+                autocomplete="off"
+              />
+              <label class="btn btn-light btn-sm rounded-pill w-100 justify-content-center" for="mb-btn-check-3">
+                打卡
+                <span
+                  class="isUnchecked iconify-add_a_photo material-symbols-outlined"
+                  >add_a_photo</span
+                >
+                <span class="isChecked iconify-rivet-icons--map-pin-solid"
+                  ></span
+                >
+              </label>
+            </div>
+            
+          </div>
+          
+          <div class="pcTitle d-none d-lg-flex flex-column flex-md-row justify-content-between pb-12">
+            <div class="touristTitle d-flex">
+              <img src="/F-13_FunFamilyMap/assets/Open-6813d4ea.svg" alt="" />
+              <div class="d-flex flex-column ms-3">
+                <h1>新竹市立動物園</h1>
+                <div class="d-flex flex-row align-items-center">
+                  <span class="btn btn-lg btn-secondary flag">經營中</span>
+                  <p class="ps-4">新竹市 東區</p>
+                </div>
+              </div>
+            </div>
+            <div class="toggles d-flex align-items-end mt-7 mt-md-0">
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="pc-btn-check"
+                autocomplete="off"
+              />
+              <label class="btn btn-light btn-sm rounded-pill" for="pc-btn-check">
+                喜愛的景點
+                <span class="isUnchecked iconify-favorite_add"></span>
+                <span class="isChecked material-symbols-outlined icon-filled"
+                  >favorite</span
+                >
+              </label>
+  
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="pc-btn-check-2"
+                autocomplete="off"
+              />
+              <label
+                class="btn btn-light btn-sm rounded-pill mx-4"
+                for="pc-btn-check-2"
+              >
+                想去的景點
+                <span
+                  class="isUnchecked iconify-fbookmark_add material-symbols-outlined"
+                  >bookmark_add</span
+                >
+                <span class="isChecked material-symbols-outlined">bookmark</span>
+              </label>
+  
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="pc-btn-check-3"
+                autocomplete="off"
+              />
+              <label class="btn btn-light btn-sm rounded-pill" for="pc-btn-check-3">
+                打卡
+                <span
+                  class="isUnchecked iconify-add_a_photo material-symbols-outlined"
+                  >add_a_photo</span
+                >
+                <span class="isChecked material-symbols-outlined"
+                  >photo_camera</span
+                >
+              </label>
+            </div>
+          </div>
+          <div class="d-flex flex-column mb-md-5">
+            <!-- 照片輪播 -->
+            <div class="tourist-info-swiper">
+              <div class="swiper  tourist-img-swiper">
+                <div class="swiper-wrapper">
+                  <!-- swiper-slide -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/F-13_FunFamilyMap/assets/attraction_1-31909a78.jpg"
+                      class="rounded w-100"
+                      alt=""
+                    />
+                  </div>
+  
+                  <!-- swiper-slide -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/F-13_FunFamilyMap/assets/attraction_2-cbd7c111.jpg"
+                      class="rounded w-100"
+                      alt=""
+                    />
+                  </div>
+                  <!-- swiper-slide -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/F-13_FunFamilyMap/assets/attraction_3-e4b38d96.jpg"
+                      class="rounded w-100"
+                      alt=""
+                    />
+                  </div>
+                  <!-- swiper-slide -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/F-13_FunFamilyMap/assets/attraction_4-cfe79e9a.jpg"
+                      class="rounded w-100"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next swiper-col-3-button-next">
+                <span class="material-symbols-outlined">arrow_right</span>
+              </div>
+              <div class="swiper-button-prev swiper-col-3-button-prev">
+                <span class="material-symbols-outlined">arrow_left</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-baseline pt-12 ">
+          <nav>
+            <div class="d-flex nav nav-underline" id="nav-tab" role="tablist">
+              <button
+                class="flex-fill nav-link active"
+                id="nav-home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-home"
+                type="button"
+                role="tab"
+                aria-controls="nav-home"
+                aria-selected="true"
+              >
+                景點資訊
+              </button>
+              <button
+                class="flex-fill nav-link"
+                id="nav-profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-profile"
+                type="button"
+                role="tab"
+                aria-controls="nav-profile"
+                aria-selected="false"
+              >
+                景點簡介
+              </button>
+              <button
+                class="flex-fill nav-link"
+                id="nav-contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-contact"
+                type="button"
+                role="tab"
+                aria-controls="nav-contact"
+                aria-selected="false"
+              >
+                景點評價
+              </button>
+            </div>
+          </nav>
+          <p class="align-items-md-end text-gray-600 ms-auto">
+            <span class="material-symbols-outlined me-2 align-bottom">edit</span
+            >修正景點資訊
+          </p>
+        </div>
+      </div>
+      <div class="container-xl">
+        
+      </div>
+    </section>
+    
+    <main class="pt-12 pb-15 bg-normal-gray">
+      <div class="container-xl">
+        
+        <!-- 景點資訊 -->
+        <div class="tab-content pt-15 mx-md-5" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+          >
+            <div class="row">
+              <div
+                class="col-12 col-lg-8 tourist-information rounded-5 px-2 px-lg-12 position-relative"
+              >
+              <h2 class="d-flex d-lg-none title font-NaniFont text-center position-absolute  top-0 start-50 translate-middle align-items-center">
+                景點資訊
+              </h2>
+                <h2 class=" d-none d-lg-flex title font-NaniFont text-center position-absolute">
+                  景點資訊
+                </h2>
+                <ul class="list-unstyled d-flex flex-column gap-2 pt-15">
+                  <li class="d-flex gap-2 align-items-center">
+                    <span
+                      class="iconify-bi--telephone-fill text-secondary"
+                    ></span
+                    >電話號碼・03-5222194
+                  </li>
+                  <li class="d-flex gap-2 align-items-center pt-3">
+                    <span
+                      class="iconify-rivet-icons--map-pin-solid text-secondary"
+                    ></span
+                    >景點位置・300新竹市東區食品路66號
+                  </li>
+                </ul>
+                <!-- 套地圖 -->
+                <img
+                  class="w-100 d-block"
+                  src="/F-13_FunFamilyMap/assets/map-32f33f1a.png"
+                  alt=""
+                />
+                <!-- 套地圖 -->
+                 
+                <ul class="list-unstyled d-flex flex-column gap-2 pt-7 pb-12">
+                  <li class="d-flex gap-2 align-items-center">
+                    <span
+                      class="iconify-bi--telephone-fill text-secondary"
+                    ></span>
+                    <p>營業時間・星期一 休息</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center "></li>
+                    <p class="ms-16">星期二  9:00-17:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center"></li>
+                    <p class="ms-16">星期三  9:00-17:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center"></li>
+                    <p class="ms-16">星期四  9:00-17:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center"></li>
+                    <p class="ms-16">星期五  9:00-17:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center"></li>
+                    <p class="ms-16">星期六  9:00-18:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center"></li>
+                    <p class="ms-16">星期日  9:00-18:00</p>
+                  </li>
+                  <li class="d-flex gap-2 align-items-center pt-3">
+                    <span class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡・1 歲+
+                  </li>
+                  <li class="d-flex gap-2 align-items-center pt-3">
+                    <span class="iconify-rivet-icons--map-pin-solid text-secondary"></span>消費金額・NT$50
+                  </li>
+                  
+                  <li class="d-flex gap-2 align-items-center pt-3">
+                    <div class="d-flex information-item text-nowrap">
+                      <span class="iconify-ph--tree-fill text-secondary  me-2"></span><p>周邊環境・</p>
+                    </div>
+                      <ul class="tourist-infomation-label d-flex flex-row list-inline flex-wrap gap-2">
+                        <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1 me-2">
+                          <span class="iconify-mingcute--parking-fill align-middle text-gray-600  me-2"></span>停車場
+                        </li>
+                        <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                          <span class="material-symbols-outlined align-middle text-gray-600  me-2">
+                            wc
+                            </span>廁所
+                        </li>
+                        <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                          <span class="iconify-mdi--mother-nurse align-middle  text-gray-600  me-2"></span>哺乳室
+                        </li>
+                        <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                          <span class="iconify-material-symbols--baby-changing-station-rounded align-middle text-gray-600 me-2"></span>育嬰室
+                        </li>
+                      </ul>
+                    
+
+                  </li>
+                  <li class="d-flex gap-2 align-items-center pt-3">
+                    <div class="d-flex information-item text-nowrap">
+                      <span class="iconify-ph--tree-fill text-secondary me-2"></span>
+                      <p>交通工具・</p>
+                    </div>
+                    <ul class="tourist-infomation-label d-flex flex-row list-inline flex-wrap gap-2">
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1 me-2">
+                        <span class="iconify-mingcute--parking-fill align-middle text-gray-600  me-2"></span>捷運
+                      </li>
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                        <span class="iconify-mdi--bus  align-middle text-gray-600  me-2"></span>公車
+                      </li>
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                        <span class="iconify-ri--car-fill  align-middle text-gray-600  me-2"></span>汽車
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <!-- <li class="d-flex align-items-center pt-3">
+                    <p class="flex-fill"><span
+                      class="iconify-ri--car-fill text-secondary"
+                    ></span
+                    ></p>
+                    <ul class="tourist-infomation-label d-flex flex-row list-inline flex-wrap gap-2">
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1 me-2">
+                        <span class="iconify-mingcute--parking-fill align-middle text-gray-600  me-2"></span>捷運
+                      </li>
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                        <span class="iconify-mdi--bus  align-middle text-gray-600  me-2"></span>公車
+                      </li>
+                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
+                        <span class="iconify-ri--car-fill  align-middle text-gray-600  me-2"></span>汽車
+                      </li>
+                    </ul>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="col-12 col-lg-4 pt-12">
+                <h4>景點標籤</h4>
+                <div class="tags pcTags d-none d-lg-block pt-5">
+                  <ul class="list-inline d-flex flex-row flex-wrap gap-2">
+                    <li>
+                      <a class="btn tag" href="#" role="button">
+                        <span class="text-primary">#</span>
+                        探索學習
+                      </a>
+                    </li>
+                      <a class="btn tag" href="#" role="button">
+                        <span class="text-primary">#</span>
+                        動物園
+                      </a>
+                    </li>
+                    <li class="newTag">
+                      <a class="btn tag tag-add" href="#" role="button">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        新增標籤
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tags mobileTags d-lg-none pt-5">
+                  <ul class="list-inline d-flex flex-row gap-1">
+                    <li>
+                      <a class="btn tag" href="#" role="button">
+                        <span class="text-primary">#</span>
+                        探索學習
+                      </a>
+                    </li>
+                    <li></li>
+                      <a class="btn tag" href="#" role="button">
+                        <span class="text-primary">#</span>
+                        動物園
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="addTags d-flex">
+                      <a class="btn tag tag-add w-100 justify-content-center" href="#" role="button">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        新增標籤
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 景點簡介 -->
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            <div
+                class=" col-12  rounded-5 px-2 px-lg-12 pb-12 position-relative tourist-information tourist-detail"
+              >
+              <h2 class="d-flex d-lg-none title font-NaniFont text-center position-absolute  top-0 start-50 translate-middle align-items-center">
+                景點簡介
+              </h2>
+                <h2 class=" d-none d-lg-flex title font-NaniFont text-center position-absolute">
+                  景點簡介
+                </h2>
+                <p class="pt-12 lh-base">新竹市立動物園位於新竹公園內，佔地面積達2.7公頃。早期為新竹公園內兒童遊樂園附設的動物園區。1960年開始擴充修建動物欄舍，並且完成全台首座天然猛獸放飼場。同時，陸續有許多熱心民眾捐贈動物，如大象、鴛鴦、獅子和鱷魚等等。1971年獲省政府核准成為獨立機關，並成為北台灣重要觀光景點，一直延續至今。
+
+                  2002年起，因園區硬體設備老舊開始整修部分籠舍。調整為開放空間及生態籠舍，以提升動物福利為宗旨取代過去以狹窄籠舍隔離的老舊動物園。2017年5月29日配合新竹公園一同進行再生計畫，進行閉園修整，並於2019年12月28日重新開放。</p>
+                <p class=" pt-12 lh-base">為落實動物福祉精神與措施，以因應國際發展及我國未來環境概況，已採取適當風險管控以保狀動物健康與福祉，於符合人道之管理下展示動物並達到尊重動物、保護動物，以進行生命教育及環境教育之場域。全新的動物園以友善動物、保留歷史回憶、提倡生命教育為三大核心價值，透過設計打開籠舍、擴大活動空間、恢復原棲地生態、營養均衡食物及完善的醫療系統，提供動物最好的照護。而推動生命教育更是本園近年來努力的方向，動物園成為民眾學習生命教育的場域，除了進入校園巡迴演講，也透過培訓專業志工為民眾提供全園區動物導覽解說，讓民眾更了解野生動物，進而學習如何保護動物、尊重生命。</p>
+              </div>
+          </div>
+          <!-- 景點評價 -->
+          <div
+            class="tab-pane fade"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            
+            <div
+                class=" col-12  rounded-5 px-2 px-lg-12 pb-12 position-relative tourist-information tourist-evaluate"
+              >
+              <h2 class="d-flex d-lg-none title font-NaniFont text-center position-absolute  top-0 start-50 translate-middle align-items-center">
+                景點評價
+              </h2>
+                <h2 class=" d-none d-lg-flex title font-NaniFont text-center position-absolute">
+                  景點評價
+                </h2>
+                <div class="pt-12">
+                  <table class="table table-striped user-evaluate-table pt-12">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">使用者</th>
+                        <th scope="col">評價</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="align-middle">1</th>
+                        <td>
+                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
+                            <div class="flex-shrink-0">
+                              <img
+                                src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg"
+                                class="rounded-circle  me-3"
+                                alt="user-evaluate"
+                                width="60"
+                                height="60"
+                              />
+                            </div>
+                            <p class="">快樂爸比</p>
+                          </div>
+                        </td>
+                        <td class="align-middle">這園區不大但動物算蠻豐富的
+                          觀看距離也蠻近的 可以看的很清楚
+                          且環境寬敞整潔 還不錯</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="align-middle">2</th>
+                        <td>
+                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
+                            <div class="flex-shrink-0">
+                              <img
+                                src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg"
+                                class="rounded-circle  me-3"
+                                alt="user-evaluate"
+                                width="60"
+                                height="60"
+                              />
+                            </div>
+                            <p class="">快樂爸比</p>
+                          </div>
+                        </td>
+                        <td class="align-middle">門票便宜，裡頭動物種類不算多，但維持得算乾淨，園區雖不大，但不失為小孩放風的好地方。</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="align-middle">3</th>
+                        <td>
+                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
+                            <div class="flex-shrink-0">
+                              <img
+                                src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg"
+                                class="rounded-circle  me-3"
+                                alt="user-evaluate"
+                                width="60"
+                                height="60"
+                              />
+                            </div>
+                            <p class="">快樂爸比</p>
+                          </div>
+                      </td>
+                      <td class="align-middle">
+                        很像高雄壽山動物園，有很多動物可以看 只是早上太熱動物都躲樹蔭去了，還可走到旁邊的體育場真的很不錯。
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="d-none thanks d-lg-flex bg-dark-gray flex-row justify-content-center">
+      <p class="my-auto me-3">特別感謝・</p>
+      <div class="flex-shrink-0">
+        <img
+          src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg"
+          class="rounded-circle  my-3"
+          alt="user-avatar"
+          width="60"
+          height="60"
+        />
+      </div>
+    </div>
+    <!-- 通知 -->
+    <div id="liveAlertPlaceholder"></div>
+    <footer class="bg-primary py-lg-12 py-6">
+    <div class="mb-lg-12 mb-6">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-8">
+                    <img src="/F-13_FunFamilyMap/assets/contact-logo-b31ef8c6.svg" width="338" class="mw-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl">
+        <div class="row justify-content-between ">
+            <div class="col-lg-6 text-lg-start text-center">
+                <ul class="list-unstyled d-inline-flex align-items-center text-white mb-lg-0 mb-2">
+                    <li><a href="" class="d-block py-2 link-white">服務政策</a></li><span class="mx-6">｜</span>
+                    <li><a href="" class="d-block py-2 link-white">隱私條款</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-lg-end  text-center text-white"><span class="fs-lg-6 fs-7">© 2024 親子好趣處
+                    FunFamilyMap. All rights reserved.</span></div>
+        </div>
+    </div>
+</footer>
+    
+  </body>
+</html>
