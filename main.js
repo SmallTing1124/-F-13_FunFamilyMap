@@ -1,10 +1,13 @@
-// import Swiper bundle with all modules installed
-import Swiper from "swiper/bundle";
-// import styles bundle
-import "swiper/css/bundle";
+import Swiper from 'swiper';
+import { Grid, Navigation, Pagination } from 'swiper/modules';
 
-// init Swiper:
-const swiper = new Swiper(".swiper-col-3", {
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+
+// Init Swiper for swiper-col-3
+const swiperCol3 = new Swiper('.swiper-col-3', {
+  modules: [Navigation],  // 設置使用的模塊
   slidesPerView: 1,
   breakpoints: {
     991: {
@@ -13,25 +16,39 @@ const swiper = new Swiper(".swiper-col-3", {
         nextEl: ".swiper-col-3-button-next",
         prevEl: ".swiper-col-3-button-prev",
       },
-    },
+    }
   },
 });
-// 景點詳情頁Swiper
-const tourstInfoSwiper = new Swiper(".tourist-img-swiper", {
-  slidesPerView: 1,
-  navigation: {
-    nextEl: ".swiper-col-3-button-next",
-    prevEl: ".swiper-col-3-button-prev",
-  },
-  autoplay: true,
-  longSwipes: 2000,
-  // breakpoints: {
-  //   991: {
-  //     slidesPerView: 1,
 
-  //   },
-  // },
+const swiperGrid = new Swiper(".swiper-grid", {
+  modules: [Navigation, Pagination, Grid],  // 設置使用的模塊
+  slidesPerView: 1.2,  // Mobile default
+  spaceBetween: 24,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-grid-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-grid-button-next",
+    prevEl: ".swiper-grid-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,  // 使用 'rows' 而不是 'row'
+        fill: 'row',
+      },
+    }
+  }
 });
+
+
 //電腦版 喜愛景點、想去景點、打卡按鈕
 let isFavoriteClicked = false;
 let isWantToGoClicked = false;
