@@ -1,0 +1,24 @@
+.tourist-add-title {
+  img {
+    width: 72px;
+    height: 95px;
+    top: -45px;
+  }
+  .tourist-add-text {
+    background-image: url(/assets/images/tourist/add-tourist-title-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.add-tourist-form-title {
+  margin-top: 20px;
+}
+.tourist-edit {
+  .tag {
+    border: 1px solid $gray-400;
+  }
+}
+
+// .blackWhite {
+//   filter: grayscale(0);
+// }
