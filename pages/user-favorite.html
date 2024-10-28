@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>親子好趣處 FunFamilyMap</title>
+</head>
+
+<body>
+    <%- include('./layout/header'); -%>
+        <div class="d-lg-none bg-white py-4 text-center z-1 shadow">
+            <h1 class="fs-6  d-flex align-items-center justify-content-center">
+                <span class="material-symbols-outlined icon-filled">favorite</span>喜愛景點
+            </h1>
+        </div>
+        <section class="py-lg-14 py-8 bg-light-gray">
+            <div class="container-xl">
+                <div class="row">
+                    <%- include('./layout/user-aside',{user_page:'favorite'}); -%>
+                    <div class="col-lg-9">
+                        <%- include('./layout/user-stats'); -%>
+                        <ul class="nav nav-underline mb-lg-8 mb-4 gap-0 border-bottom" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="favorites-tab" data-bs-toggle="tab"
+                                    data-bs-target="#favorites-tab-pane" type="button" role="tab"
+                                    aria-controls="favorites-tab-pane" aria-selected="true">喜愛的景點</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="wishlist-tab" data-bs-toggle="tab"
+                                    data-bs-target="#wishlist-tab-pane" type="button" role="tab"
+                                    aria-controls="wishlist-tab-pane" aria-selected="false">想去的景點</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="checkedIn-tab" data-bs-toggle="tab"
+                                    data-bs-target="#checkedIn-tab-pane" type="button" role="tab"
+                                    aria-controls="checkedIn-tab-pane" aria-selected="false">已打卡景點</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="favorites-tab-pane" role="tabpanel"
+                                aria-labelledby="favorites-tab" tabindex="0">
+                                <div class="card shadow">
+                                    <div class="card-body p-lg-8 p-3">
+                                        <div
+                                            class="btn-gruop bg-light-gray d-inline-flex p-1 rounded-5 mb-lg-12 mb-6 gap-2">
+                                            <a href="#" class="btn btn-white active">營業中(13)</a>
+                                            <a href="#" class="btn btn-white">暫停營業(7)</a>
+                                            <a href="#" class="btn btn-white">永久歇業(2)</a>
+                                        </div>
+                                        <div class="row row-cols-lg-3 row-cols-md-2  row-cols-1 g-lg-4 g-3">
+                                            <!-- col -->
+                                            <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_1.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">新竹市立動物園</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市東區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_2.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">廢物媽媽育兒農場</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市
+                                                                    香山區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_4.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">台北市立兒童新樂園</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>台北市
+                                                                    士林區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="wishlist-tab-pane" role="tabpanel"
+                                aria-labelledby="wishlist-tab" tabindex="0">
+                                <div class="card shadow">
+                                    <div class="card-body p-lg-8 p-3">
+                                        <div
+                                            class="btn-gruop bg-light-gray d-inline-flex p-1 rounded-5 mb-lg-12 mb-6 gap-2">
+                                            <a href="#" class="btn btn-white active">營業中(13)</a>
+                                            <a href="#" class="btn btn-white">暫停營業(7)</a>
+                                            <a href="#" class="btn btn-white">永久歇業(2)</a>
+                                        </div>
+                                        <div class="row row-cols-lg-3 row-cols-md-2  row-cols-1 g-lg-4 g-3">
+                                            <!-- col -->
+                                            <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_1.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">新竹市立動物園</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市東區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_2.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">廢物媽媽育兒農場</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>新竹市
+                                                                    香山區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="checkedIn-tab-pane" role="tabpanel"
+                                aria-labelledby="checkedIn-tab" tabindex="0">
+                                <div class="card shadow">
+                                    <div class="card-body p-lg-8 p-3">
+                                        <div
+                                            class="btn-gruop bg-light-gray d-inline-flex p-1 rounded-5 mb-lg-12 mb-6 gap-2">
+                                            <a href="#" class="btn btn-white active">營業中(13)</a>
+                                            <a href="#" class="btn btn-white">暫停營業(7)</a>
+                                            <a href="#" class="btn btn-white">永久歇業(2)</a>
+                                        </div>
+                                        <div class="row row-cols-lg-3 row-cols-md-2  row-cols-1 g-lg-4 g-3">
+                                             <!-- col -->
+                                             <div class="col">
+                                                <a href="tourist-info.html" class="d-block">
+                                                    <div class="card attraction-card">
+                                                        <div class="card-body">
+                                                            <img src="/assets/images/home/attraction_4.jpg"
+                                                                class="rounded-top" alt="" />
+                                                            <h3 class="fs-lg-4 fs-5 fw-bold mb-4">台北市立兒童新樂園</h3>
+                                                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-rivet-icons--map-pin-solid text-secondary"></span>台北市
+                                                                    士林區
+                                                                </li>
+                                                                <li class="d-flex gap-2 align-items-center">
+                                                                    <span
+                                                                        class="iconify-mingcute--baby-fill text-secondary"></span>最小適齡
+                                                                    1 歲
+                                                                </li>
+                                                            </ul>
+                                                            <div class="text-end">
+                                                                <div href="#"
+                                                                    class="d-inline-flex align-items-center gap-2 fw-bold text-primary">
+                                                                    查看詳情<span
+                                                                        class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('./layout/footer'); -%>
+            <script type="module" src="../main.js"></script>
+</body>
+
+</html>

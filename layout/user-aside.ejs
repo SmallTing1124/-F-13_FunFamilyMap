@@ -1,0 +1,40 @@
+<div class="col-lg-3 d-none d-lg-block sticky-top">
+    <div class="card shadow">
+        <div class="card-body px-0">
+            <div class="d-flex flex-column align-items-center text-center py-6 border-bottom">
+                <div class="flex-shrink-0">
+                    <img src="/assets/images/user-avatar.jpg" class="rounded-circle"
+                        alt="user-avatar" width="60" height="60">
+                </div>
+                <div class="flex-grow-1">
+                    <h4 class="py-3">陳大廷</h4>
+                    <p class="text-gray-600">userName@mail.com</p>
+                </div>
+            </div>
+            <ul class="list-unstyled m-0 py-4 border-bottom user-aside">
+                <li>
+                    <a class="<%= user_page === 'maps' ? 'active' : '' %> btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"  
+                        href="user-maps.html">
+                        <span class="material-symbols-outlined <%= user_page === 'maps' ? 'icon-filled' : '' %>">map</span>我的地圖</a>
+                </li>
+                <li>
+                    <a class="<%= user_page === 'favorite' ? 'active' : '' %> btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100 "
+                        href="user-favorite.html" >
+                        <span class="material-symbols-outlined <%= user_page === 'favorite' ? 'icon-filled' : '' %>">favorite</span>喜愛景點</a>
+                </li>
+                <li>
+                    <a class="<%= user_page === 'reviews' ? 'active' : '' %> btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"
+                        href="user-reviews.html">
+                        <span class="material-symbols-outlined <%= user_page === 'reviews' ? 'icon-filled' : '' %>">star</span>景點評價</a>
+                </li>
+                <li>
+                    <a class="<%= user_page === 'info' ? 'active' : '' %> btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"
+                        href="user-info.html">
+                        <span class="material-symbols-outlined <%= user_page === 'info' ? 'icon-filled' : '' %>">settings</span>會員資料</a>
+                </li>
+            </ul>
+            <a class=" d-inline-flex align-items-center gap-3 py-4 px-8 w-100 mt-4 link-gray-600"
+                href="#"><span class="material-symbols-outlined">logout</span>登出</a>
+        </div>
+    </div>
+</div>
