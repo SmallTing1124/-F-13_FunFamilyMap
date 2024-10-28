@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/F-13_FunFamilyMap/assets/favicon-24d8a4a0.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>親子好趣處 FunFamilyMap</title>
+  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-dbf17464.js"></script>
+  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-3bd56afa.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow sticky-top w-100 py-lg-4 py-2">
+  <div class="container-xl">
+      <div class="d-flex flex-nowrap  align-items-center w-100 position-relative">
+          <a class="navbar-brand me-xl-12 me-3" href="index.html">
+              <img src="/F-13_FunFamilyMap/assets/logo-67eb97f1.svg" alt="親子好趣處" class="d-none d-lg-block">
+              <img src="/F-13_FunFamilyMap/assets/logo-mini-bbcecf91.svg" alt="親子好趣處" class="d-lg-none">
+              <h1>親子好趣處 FunFamilyMap</h1>
+          </a>
+
+          <form id="searchForm" class="px-lg-4 px-2 rounded-pill ms-lg-0 ms-auto" role="search">
+              <label for="searchInput" class="d-flex align-items-center">
+                  <span class="material-symbols-outlined">search</span>
+              </label>
+              <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
+                  aria-label="Search">
+          </form>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" data-bs-auto-close="outside"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+
+          <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
+              <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                  </li>
+              </ul>
+              <div class="d-flex justify-content-center column-gap-lg-lg-4 column-gap-1">
+                  <a href="" class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                  <a href="" class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+              </div>
+              <div class="dropdown">
+                  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" alt="mdo" width="48" height="48"
+                          class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
+                      <li>
+                          <div class="d-flex align-items-center py-6 px-8">
+                              <div class="flex-shrink-0">
+                                  <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle" alt="user-avatar"
+                                      width="60" height="60">
+                              </div>
+                              <div class="flex-grow-1 ms-3">
+                                  <h6>陳大廷</h6>
+                                  <p class="text-gray-600">userName@mail.com</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider mt-0 mb-4">
+                      </li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-maps.html"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-favorite.html"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-reviews.html"><span class="material-symbols-outlined">star</span>景點評價</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-info.html"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
+                      <li>
+                          <hr class="dropdown-divider my-4">
+                      </li>
+                      <li><a class="dropdown-item  d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="d-lg-none">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="nav nav-underline nav-justified w-100 column-gap-0 border-top" id="nav-tab" role="tablist">
+              <li class="nav-item">
+                  <button class="nav-link active" id="nav-menu-group" data-bs-toggle="tab" data-bs-target="#nav-menu"
+                      type="button" role="tab" aria-controls="nav-menu" aria-selected="true">探索</button>
+              </li>
+              <li class="nav-item">
+                  <button class="nav-link" id="nav-member-group" data-bs-toggle="tab" data-bs-target="#nav-member"
+                      type="button" role="tab" aria-controls="nav-member" aria-selected="false">關於我</button>
+              </li>
+          </ul>
+          <div class="tab-content  w-100 h-100" id="nav-tabContent">
+              <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
+                  aria-labelledby="nav-menu-group" tabindex="0">
+                  <div class="d-flex flex-column h-100 py-6">
+                      <ul class="navbar-nav mb-0 row-gap-6">
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                          </li>
+                      </ul>
+                      <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
+                          <a href=""
+                              class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                          <a href=""
+                              class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="tab-pane h-100 fade" id="nav-member" role="tabpanel" aria-labelledby="nav-member-group"
+                  tabindex="0">
+                  <div class="h-100">
+                      <ul class="navbar-nav mb-0">
+                          <li>
+                              <div class="d-flex align-items-center py-6 px-8 border-bottom">
+                                  <div class="flex-shrink-0">
+                                      <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle"
+                                          alt="user-avatar" width="60" height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6>陳大廷</h6>
+                                      <p class="text-gray-600">userName@mail.com</p>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-maps.html">
+                                  <span class="material-symbols-outlined">map</span>我的地圖</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-favorite.html">
+                                  <span class="material-symbols-outlined">favorite</span>喜愛景點</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-reviews.html">
+                                  <span class="material-symbols-outlined">star</span>景點評價</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-info.html">
+                                  <span class="material-symbols-outlined">settings</span>會員資料</a>
+                          </li>
+                          <li>
+                              <a class=" d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100"
+                              href="#"><span class="material-symbols-outlined">logout</span>登出</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>        <div class="d-lg-none bg-white py-4 text-center z-1 shadow">
+            <h1 class="fs-6  d-flex align-items-center justify-content-center">
+                <span class="material-symbols-outlined icon-filled">settings</span>會員資料
+            </h1>
+        </div>
+        <section class="py-lg-14 py-8 bg-light-gray">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-3 d-none d-lg-block sticky-top">
+    <div class="card shadow">
+        <div class="card-body px-0">
+            <div class="d-flex flex-column align-items-center text-center py-6 border-bottom">
+                <div class="flex-shrink-0">
+                    <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle"
+                        alt="user-avatar" width="60" height="60">
+                </div>
+                <div class="flex-grow-1">
+                    <h4 class="py-3">陳大廷</h4>
+                    <p class="text-gray-600">userName@mail.com</p>
+                </div>
+            </div>
+            <ul class="list-unstyled m-0 py-4 border-bottom user-aside">
+                <li>
+                    <a class=" btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"  
+                        href="user-maps.html">
+                        <span class="material-symbols-outlined ">map</span>我的地圖</a>
+                </li>
+                <li>
+                    <a class=" btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100 "
+                        href="user-favorite.html" >
+                        <span class="material-symbols-outlined ">favorite</span>喜愛景點</a>
+                </li>
+                <li>
+                    <a class=" btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"
+                        href="user-reviews.html">
+                        <span class="material-symbols-outlined ">star</span>景點評價</a>
+                </li>
+                <li>
+                    <a class="active btn-link d-inline-flex align-items-center gap-3 py-4 px-8 w-100"
+                        href="user-info.html">
+                        <span class="material-symbols-outlined icon-filled">settings</span>會員資料</a>
+                </li>
+            </ul>
+            <a class=" d-inline-flex align-items-center gap-3 py-4 px-8 w-100 mt-4 link-gray-600"
+                href="#"><span class="material-symbols-outlined">logout</span>登出</a>
+        </div>
+    </div>
+</div>                        <div class="col-lg-9">
+                            <div class="card">
+                                <div class="card-header px-lg-6  py-4 text-lg-start text-center">
+                                    <h5 class="text-gray-700">基本資料</h5>
+                                </div>
+                                <div class="card-body p-lg-6 p-3">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <label for="formUserName" class="form-label">
+                                                姓名
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <input type="text" class="form-control rounded-2" id="formUserName"
+                                                placeholder="請輸入姓名">
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <label for="formNickname" class="form-label">
+                                                暱稱
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <input type="text" class="form-control rounded-2" id="formNickname"
+                                                placeholder="請輸入暱稱">
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <label for="formBirthdate" class="form-label">
+                                                生日
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <input type="date" class="form-control rounded-2" id="formBirthdate"
+                                                placeholder="請輸入生日">
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <label for="formGender" class="form-label">
+                                                性別
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <select class="form-select rounded-2">
+                                                <option selected>選擇性別</option>
+                                                <option value="1">男生</option>
+                                                <option value="2">女生</option>
+                                                <option value="3">其他</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="formNickname" class="form-label">
+                                                電話
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <input type="tel" class="form-control rounded-2" id="formNickname"
+                                                placeholder="請輸入聯絡電話">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="formNickname" class="form-label">
+                                                信箱
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <input type="email" class="form-control rounded-2" id="formNickname"
+                                                placeholder="請輸入聯絡信箱">
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <label for="formNickname" class="form-label">
+                                                所在地區
+                                                <span class="text-highligh-600 d-inlinr-block ps-1">*</span>
+                                            </label>
+                                            <div class="row g-4">
+                                                <div class="col-lg-6">
+                                                    <select class="form-select rounded-2">
+                                                        <option selected>選擇所在縣市</option>
+                                                        <option value="1">台北市</option>
+                                                        <option value="2">新北市</option>
+                                                        <option value="3">桃園市</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select class="form-select rounded-2">
+                                                        <option selected>選擇所在區域</option>
+                                                        <option value="1">大安區</option>  
+                                                        <option value="2">松山區</option>
+                                                        <option value="3">大同區</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer px-lg-6  py-2 text-lg-end text-center">
+                                    <a href="#" class="btn btn-primary rounded-2 d-lg-inline-block d-block py-2">儲存</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-primary py-lg-12 py-6">
+    <div class="mb-lg-12 mb-6">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-8">
+                    <img src="/F-13_FunFamilyMap/assets/contact-logo-b31ef8c6.svg" width="338" class="mw-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl">
+        <div class="row justify-content-between ">
+            <div class="col-lg-6 text-lg-start text-center">
+                <ul class="list-unstyled d-inline-flex align-items-center text-white mb-lg-0 mb-2">
+                    <li><a href="" class="d-block py-2 link-white">服務政策</a></li><span class="mx-6">｜</span>
+                    <li><a href="" class="d-block py-2 link-white">隱私條款</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-lg-end  text-center text-white"><span class="fs-lg-6 fs-7">© 2024 親子好趣處
+                    FunFamilyMap. All rights reserved.</span></div>
+        </div>
+    </div>
+</footer>            
+</body>
+
+</html>
