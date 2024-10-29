@@ -147,8 +147,8 @@
 }
 
 
-.table> :not(caption)>*>* {
-    @include media-breakpoint-up(lg) {
+.table > :not(caption) > * > *{
+    @include media-breakpoint-down(lg) {
         padding-top: 8px;
         padding-bottom: 8px;
     }
