@@ -31,13 +31,14 @@
         flex-wrap: nowrap;
     }
 }
-.swiper-grid-pagination{
+
+.swiper-grid-pagination {
     position: relative;
-    margin-top:24px;
+    margin-top: 24px;
     z-index: 999;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background-color: $primary;
 }
 
@@ -49,7 +50,7 @@
     border-color: $primary;
     border-width: 3px;
     border-radius: 32px;
- 
+
 
     &::before {
         content: '';
@@ -70,10 +71,8 @@
 
         .avatar-img {
             img {
-                @include media-breakpoint-down(lg) {
-                    height: 96px ;
-                    width: 96px ;
-                }
+                height: 96px !important;
+                width: 96px !important;
             }
         }
 
@@ -147,12 +146,12 @@
 
 
 .table > :not(caption) > * > *{
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-down(lg) {
         padding-top: 8px;
         padding-bottom: 8px;
     }
 }
 
-.table-responsive{
-    white-space:nowrap;
+.table-responsive {
+    white-space: nowrap;
 }
