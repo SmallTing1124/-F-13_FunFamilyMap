@@ -72,8 +72,8 @@
         .avatar-img {
             img {
                 @include media-breakpoint-down(lg) {
-                    height: 96px;
-                    width: 96px;
+                    height: 96px ;
+                    width: 96px ;
                 }
             }
         }
