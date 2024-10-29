@@ -12,9 +12,81 @@
 </head>
 
 <body>
- 
-    
-    <script type="module" src="../main.js"></script>
+  <section class="auth-container">
+    <div class="container">
+      <div class="row min-vh-100 align-content-center">
+        <div class="col-lg-8 d-flex align-items-center justify-content-center">
+          <a href="index.html" class="d-block col-lg-6 col-8 pb-lg-0 pb-6 pe-lg-8">
+            <img src="/assets/images/home/contact-logo.svg" alt="親子好趣處" width="100%">
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-wrapper bg-white px-lg-7 px-4 py-12 rounded-5 shadow">
+            <div class="d-flex justify-content-between align-items-center mb-8">
+              <h2 class="form-title fs-3 text-primary">登入</h2>
+              <span>沒有帳號，<a href="register.html">註冊</a></span>
+            </div>
+            <form action="" method="post" class="row g-3 flex-column">
+              <div class="form-floating col">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">電子郵件</label>
+              </div>
+              <div class="form-floating col">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="密碼">
+                <label for="floatingPassword">密碼</label>
+                <div class="text-center">
+                  <!-- <small class="text">限8-24碼英文數字符號</small> -->
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-4 justify-content-center">登入</button>
+            </form>
+            <!-- Button trigger modal -->
+            <a class="link-primary mt-3 d-block text-center mt-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              忘記密碼
+            </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <form action="" method="post" class="">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">重設密碼</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center mb-3">請填寫你的會員電子郵件</p>
+
+                      <div class="row g-3 flex-column">
+                        <div class="form-floating col">
+                          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                          <label for="floatingInput">電子郵件</label>
+                        </div>
+                        <div class="form-floating col">
+                          <input type="date" class="form-control" id="floatingPassword" placeholder="生日">
+                          <label for="floatingPassword">生日</label>
+                          <div class="text-center">
+                            <!-- <small class="text">限8-24碼英文數字符號</small> -->
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">取消</button>
+                      <button type="button" class="btn btn-primary">送出</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>
