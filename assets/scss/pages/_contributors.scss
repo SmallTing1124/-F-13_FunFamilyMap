@@ -70,8 +70,10 @@
 
         .avatar-img {
             img {
-                height: 96px !important;
-                width: 96px !important;
+                @include media-breakpoint-down(lg) {
+                    height: 96px ;
+                    width: 96px ;
+                }
             }
         }
 
@@ -104,7 +106,7 @@
         .card-body {
             border-top: 32px solid $gold;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-up(lg) {
                 padding-top: 128px;
             }
         }
@@ -118,7 +120,7 @@
         .card-body {
             border-top: 32px solid $silver;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-up(lg) {
                 padding-top: 96px;
             }
         }
@@ -132,7 +134,7 @@
         .card-body {
             border-top: 32px solid $copper;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-up(lg) {
                 padding-top: 64px;
             }
         }
@@ -145,7 +147,7 @@
 
 
 .table > :not(caption) > * > *{
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-up(lg) {
         padding-top: 8px;
         padding-bottom: 8px;
     }
