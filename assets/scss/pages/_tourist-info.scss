@@ -11,6 +11,14 @@
   .swiper-button-prev {
     left: -20px;
   }
+  .pagination-block {
+    width: 95px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+  }
 }
 
 .title {
