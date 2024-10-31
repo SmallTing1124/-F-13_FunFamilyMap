@@ -364,23 +364,6 @@
                       
                     </ul>
                   </li>
-                  <!-- <li class="d-flex align-items-center pt-3">
-                    <p class="flex-fill"><span
-                      class="iconify-ri--car-fill text-secondary"
-                    ></span
-                    ></p>
-                    <ul class="tourist-infomation-label d-flex flex-row list-inline flex-wrap gap-2">
-                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1 me-2">
-                        <span class="iconify-mingcute--parking-fill align-middle text-gray-600  me-2"></span>捷運
-                      </li>
-                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
-                        <span class="iconify-mdi--bus  align-middle text-gray-600  me-2"></span>公車
-                      </li>
-                      <li class="tourist-information-label-item pe-3 bg-normal-gray rounded px-2 py-1  me-2">
-                        <span class="iconify-ri--car-fill  align-middle text-gray-600  me-2"></span>汽車
-                      </li>
-                    </ul>
-                  </li> -->
                 </ul>
               </div>
               <div class="col-12 col-lg-4 pt-12">
@@ -462,84 +445,148 @@
           >
             
             <div
-                class=" col-12  rounded-5 px-2 px-lg-12 pb-12 position-relative tourist-information tourist-evaluate"
+                class=" col-12  px-2 px-lg-12 pb-12 position-relative"
               >
-              <h2 class="d-flex d-lg-none title font-NaniFont text-center position-absolute  top-0 start-50 translate-middle align-items-center">
+              <h2 class="evaluate-title d-flex d-lg-none title font-NaniFont text-center position-absolute start-50 translate-middle align-items-center">
                 景點評價
               </h2>
                 <h2 class=" d-none d-lg-flex title font-NaniFont text-center position-absolute">
                   景點評價
                 </h2>
-                <div class="pt-12">
-                  <table class="table table-striped user-evaluate-table pt-12">
-                    <thead class="table-light">
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">使用者</th>
-                        <th scope="col">評價</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="align-middle">1</th>
-                        <td>
-                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
-                            <div class="flex-shrink-0">
-                              <img
-                                src="/assets/images/user-avatar.jpg"
-                                class="rounded-circle  me-3"
-                                alt="user-evaluate"
-                                width="60"
-                                height="60"
-                              />
+                <div class="row d-flex flex-column-reverse flex-lg-row mt-12 mt-lg-0">
+                  <div class="col-12 col-lg-8 px-2 px-lg-12 tourist-evaluate  rounded-5 mt-15 mt-lg-0">
+                    <div class="d-flex mt-10">
+                      <h3 class="score rounded-pill bg-primary text-white me-5">5.0</h3>
+                      <div class="evaluate d-flex flex-column">
+                        <ul class="d-flex list-inline align-items-center">
+                          <li>
+                            <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                          </li>
+                          <li>
+                            <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                          </li>
+                          <li>
+                            <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                          </li>
+                          <li>
+                            <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                          </li>
+                          <li>
+                            <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                          </li>
+                        </ul>
+                        <p class="d-block">4則評價</p>
+                      </div>
+                      
+                    </div>
+                    <div class="message-share">
+                      <h3 class="add-tourist-form-title font-NaniFont d-inline-block text-primary rounded bg-secondary px-5 py-1 mt-10 mb-5">
+                        留言分享
+                      </h3>
+                      <ul class="evaluate-list list-unstyled">
+                        <li class="evaluate-list-item d-flex rounded-3 py-2 px-3 bg-white">
+                          <img class="evaluate-avatar me-3" src="/assets/images/user-avatar.jpg" alt="">
+                          <div class="evaluate-text">
+                            <div class="evaluate-text-top d-flex">
+                              <p>小明媽咪</p>
+                              <p class="text-primary mx-3">2週前</p>
+                              <div class="star-score">
+                                <ul class="d-flex list-inline align-items-center">
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                            <p class="">快樂爸比</p>
-                          </div>
-                        </td>
-                        <td class="align-middle">這園區不大但動物算蠻豐富的
-                          觀看距離也蠻近的 可以看的很清楚
-                          且環境寬敞整潔 還不錯</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="align-middle">2</th>
-                        <td>
-                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
-                            <div class="flex-shrink-0">
-                              <img
-                                src="/assets/images/user-avatar.jpg"
-                                class="rounded-circle  me-3"
-                                alt="user-evaluate"
-                                width="60"
-                                height="60"
-                              />
+                            <div class="evaluate-text-bottom mt-2">
+                              <p>小朋友超喜歡餵羊跟小兔子,場地乾淨,還有很棒的戶外遊樂設施!</p>
                             </div>
-                            <p class="">快樂爸比</p>
                           </div>
-                        </td>
-                        <td class="align-middle">門票便宜，裡頭動物種類不算多，但維持得算乾淨，園區雖不大，但不失為小孩放風的好地方。</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="align-middle">3</th>
-                        <td>
-                          <div class="user-evaluate d-flex flex-row align-items-center py-3"> 
-                            <div class="flex-shrink-0">
-                              <img
-                                src="/assets/images/user-avatar.jpg"
-                                class="rounded-circle  me-3"
-                                alt="user-evaluate"
-                                width="60"
-                                height="60"
-                              />
+                        </li>
+                        <li class="evaluate-list-item d-flex rounded-3 py-2 px-3 bg-white">
+                          <img class="evaluate-avatar me-3" src="/assets/images/user-avatar.jpg" alt="">
+                          <div class="evaluate-text">
+                            <div class="evaluate-text-top d-flex">
+                              <p>小明媽咪</p>
+                              <p class="text-primary mx-3">2週前</p>
+                              <div class="star-score">
+                                <ul class="d-flex list-inline align-items-center">
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                            <p class="">快樂爸比</p>
+                            <div class="evaluate-text-bottom mt-2">
+                              <p>小朋友超喜歡餵羊跟小兔子,場地乾淨,還有很棒的戶外遊樂設施!</p>
+                            </div>
                           </div>
-                      </td>
-                      <td class="align-middle">
-                        很像高雄壽山動物園，有很多動物可以看 只是早上太熱動物都躲樹蔭去了，還可走到旁邊的體育場真的很不錯。
-                      </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        </li>
+                        <li class="evaluate-list-item d-flex rounded-3 py-2 px-3 bg-white">
+                          <img class="evaluate-avatar me-3" src="/assets/images/user-avatar.jpg" alt="">
+                          <div class="evaluate-text">
+                            <div class="evaluate-text-top d-flex">
+                              <p>小明媽咪</p>
+                              <p class="text-primary mx-3">2週前</p>
+                              <div class="star-score">
+                                <ul class="d-flex list-inline align-items-center">
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                  <li>
+                                    <span class="material-symbols-outlined icon-filled text-secondary">star</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="evaluate-text-bottom mt-2">
+                              <p>小朋友超喜歡餵羊跟小兔子,場地乾淨,還有很棒的戶外遊樂設施!</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn btn-white tag border-2 border-gray-400 text-primary mb-12 bg-white">載入更多評價...</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h5 class="px-7 py-12 bg-white rounded-top">和大家分享你在景點的體驗心得吧!</h5>
+                    <button class="btn btn-primary w-100 rounded-0 d-flex justify-content-center">
+                      <span class="material-symbols-outlined icon-filled text-secondary">star</span>評價景點
+                    </button>
+                  </div>
                 </div>
                 
               </div>
