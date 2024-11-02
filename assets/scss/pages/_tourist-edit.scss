@@ -31,6 +31,9 @@
     display: inline-block;
     padding: 12px 24px;
     border-radius: $border-radius-pill;
+    @include media-breakpoint-down(md) { 
+      width: 100%;
+    }
   }
   
 }
@@ -110,7 +113,7 @@
 
 .btn-form-check {
   padding: 0;
-  margin-right: 4px;
+  margin: 0;
   position: relative;
 
   .form-check-input {
@@ -129,10 +132,17 @@
     padding: 12px 24px;
     border-radius: 50px;
     color: $gray-600;
+    // @include media-breakpoint-down(md) { 
+    //   padding: 4px 12px;
+    // }
+
 
     span{
       vertical-align: middle;
       margin-right: 8px;
+      @include media-breakpoint-down(md) { 
+        margin-right: 4px;
+      }
     }
     span{
       pointer-events: none;
