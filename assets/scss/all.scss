@@ -50,6 +50,8 @@
 @import "./base/base.scss";
 @import "./base/fontStyle.scss";
 
+@import "./helper/mixins";
+
 @import "./components/icon";
 @import "./components/buttons";
 @import "./components/navigation";
@@ -71,3 +73,5 @@
 
 @import "./pages/user";
 @import "./pages/login";
+
+@import "./pages/open_up";
