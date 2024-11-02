@@ -1,161 +1,160 @@
 <nav class="navbar navbar-expand-lg shadow sticky-top w-100 py-lg-4 py-2">
-    <div class="container-xl">
-        <div class="d-flex flex-nowrap  align-items-center w-100 position-relative">
-            <a class="navbar-brand me-xl-12 me-3" href="index.html">
-                <img src="/assets/images/logo.svg" alt="親子好趣處" class="d-none d-lg-block">
-                <img src="/assets/images/logo-mini.svg" alt="親子好趣處" class="d-lg-none">
-                <h1>親子好趣處 FunFamilyMap</h1>
-            </a>
+  <div class="container-xl">
+      <div class="d-flex flex-nowrap  align-items-center w-100 position-relative">
+          <a class="navbar-brand me-xl-12 me-3" href="index.html">
+              <img src="/assets/images/logo.svg" alt="親子好趣處" class="d-none d-lg-block">
+              <img src="/assets/images/logo-mini.svg" alt="親子好趣處" class="d-lg-none">
+              <h1>親子好趣處 FunFamilyMap</h1>
+          </a>
 
-            <form id="searchForm" class="px-lg-4 px-2 rounded-pill ms-lg-0 ms-auto" role="search">
-                <label for="searchInput" class="d-flex align-items-center">
-                    <span class="material-symbols-outlined">search</span>
-                </label>
-                <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
-                    aria-label="Search">
-            </form>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" data-bs-auto-close="outside"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          <form id="searchForm" class="px-lg-4 px-2 rounded-pill ms-lg-0 ms-auto" role="search">
+              <label for="searchInput" class="d-flex align-items-center">
+                  <span class="material-symbols-outlined">search</span>
+              </label>
+              <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
+                  aria-label="Search">
+          </form>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" data-bs-auto-close="outside"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
 
-            <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
-                <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- <a class="nav-link text-center" href="contributors.html">景點開拓者</a> -->
-                        <a class="nav-link text-center" href="open_up.html">景點開拓者</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center" href="#">新增景點</a>
-                    </li>
-                </ul>
-                <div class="d-flex justify-content-center column-gap-lg-lg-4 column-gap-1">
-                    <a href="" class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
-                    <a href="" class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
-                </div>
-                <div class="dropdown">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/assets/images/user-avatar.jpg" alt="mdo" width="48" height="48"
-                            class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
-                        <li>
-                            <div class="d-flex align-items-center py-6 px-8">
-                                <div class="flex-shrink-0">
-                                    <img src="/assets/images/user-avatar.jpg" class="rounded-circle" alt="user-avatar"
-                                        width="60" height="60">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6>陳大廷</h6>
-                                    <p class="text-gray-600">userName@mail.com</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider mt-0 mb-4">
-                        </li>
-                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
-                                href="user-maps.html"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
-                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
-                                href="#"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
-                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
-                                href="#"><span class="material-symbols-outlined">star</span>景點評價</a></li>
-                        <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
-                                href="#"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
-                        <li>
-                            <hr class="dropdown-divider my-4">
-                        </li>
-                        <li><a class="dropdown-item  d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
-                                href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="d-lg-none">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="nav nav-underline nav-justified w-100 column-gap-0 border-top" id="nav-tab" role="tablist">
-                <li class="nav-item">
-                    <button class="nav-link active" id="nav-menu-group" data-bs-toggle="tab" data-bs-target="#nav-menu"
-                        type="button" role="tab" aria-controls="nav-menu" aria-selected="true">探索</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" id="nav-member-group" data-bs-toggle="tab" data-bs-target="#nav-member"
-                        type="button" role="tab" aria-controls="nav-member" aria-selected="false">關於我</button>
-                </li>
-            </ul>
-            <div class="tab-content  w-100 h-100" id="nav-tabContent">
-                <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
-                    aria-labelledby="nav-menu-group" tabindex="0">
-                    <div class="d-flex flex-column h-100 py-6">
-                        <ul class="navbar-nav mb-0 row-gap-6">
-                            <li class="nav-item">
-                                <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-center" href="#">新增景點</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
-                            <a href=""
-                                class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
-                            <a href=""
-                                class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
-                        </div>
-                    </div>
+          <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
+              <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                  </li>
+              </ul>
+              <div class="d-flex justify-content-center column-gap-lg-lg-4 column-gap-1">
+                  <a href="login.html" class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                  <a href="register.html" class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+              </div>
+              <div class="dropdown">
+                  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/images/user-avatar.jpg" alt="mdo" width="48" height="48"
+                          class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
+                      <li>
+                          <div class="d-flex align-items-center py-6 px-8">
+                              <div class="flex-shrink-0">
+                                  <img src="/assets/images/user-avatar.jpg" class="rounded-circle" alt="user-avatar"
+                                      width="60" height="60">
+                              </div>
+                              <div class="flex-grow-1 ms-3">
+                                  <h6>陳大廷</h6>
+                                  <p class="text-gray-600">userName@mail.com</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider mt-0 mb-4">
+                      </li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-maps.html"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-favorite.html"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-reviews.html"><span class="material-symbols-outlined">star</span>景點評價</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-info.html"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
+                      <li>
+                          <hr class="dropdown-divider my-4">
+                      </li>
+                      <li><a class="dropdown-item  d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="d-lg-none">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="nav nav-underline nav-justified w-100 column-gap-0 border-top" id="nav-tab" role="tablist">
+              <li class="nav-item">
+                  <button class="nav-link active" id="nav-menu-group" data-bs-toggle="tab" data-bs-target="#nav-menu"
+                      type="button" role="tab" aria-controls="nav-menu" aria-selected="true">探索</button>
+              </li>
+              <li class="nav-item">
+                  <button class="nav-link" id="nav-member-group" data-bs-toggle="tab" data-bs-target="#nav-member"
+                      type="button" role="tab" aria-controls="nav-member" aria-selected="false">關於我</button>
+              </li>
+          </ul>
+          <div class="tab-content  w-100 h-100" id="nav-tabContent">
+              <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
+                  aria-labelledby="nav-menu-group" tabindex="0">
+                  <div class="d-flex flex-column h-100 py-6">
+                      <ul class="navbar-nav mb-0 row-gap-6">
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                          </li>
+                      </ul>
+                      <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
+                          <a href="login.html"
+                              class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                          <a href="register.html"
+                              class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+                      </div>
+                  </div>
 
-                </div>
-                <div class="tab-pane h-100 fade" id="nav-member" role="tabpanel" aria-labelledby="nav-member-group"
-                    tabindex="0">
-                    <div class="h-100">
-                        <ul class="navbar-nav mb-0">
-                            <li>
-                                <div class="d-flex align-items-center py-6 px-8 border-bottom">
-                                    <div class="flex-shrink-0">
-                                        <img src="/assets/images/user-avatar.jpg" class="rounded-circle"
-                                            alt="user-avatar" width="60" height="60">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6>陳大廷</h6>
-                                        <p class="text-gray-600">userName@mail.com</p>
-                                    </div>
-                                </div>
-                            </li>
+              </div>
+              <div class="tab-pane h-100 fade" id="nav-member" role="tabpanel" aria-labelledby="nav-member-group"
+                  tabindex="0">
+                  <div class="h-100">
+                      <ul class="navbar-nav mb-0">
+                          <li>
+                              <div class="d-flex align-items-center py-6 px-8 border-bottom">
+                                  <div class="flex-shrink-0">
+                                      <img src="/assets/images/user-avatar.jpg" class="rounded-circle"
+                                          alt="user-avatar" width="60" height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6>陳大廷</h6>
+                                      <p class="text-gray-600">userName@mail.com</p>
+                                  </div>
+                              </div>
+                          </li>
 
-                            <li>
-                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-maps.html">
-                                    <span class="material-symbols-outlined">map</span>我的地圖</a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
-                                    <span class="material-symbols-outlined">favorite</span>喜愛景點</a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
-                                    <span class="material-symbols-outlined">star</span>景點評價</a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="#">
-                                    <span class="material-symbols-outlined">settings</span>會員資料</a>
-                            </li>
-                            <li>
-                                <a class=" d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100"
-                                href="#"><span class="material-symbols-outlined">logout</span>登出</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-maps.html">
+                                  <span class="material-symbols-outlined">map</span>我的地圖</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-favorite.html">
+                                  <span class="material-symbols-outlined">favorite</span>喜愛景點</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-reviews.html">
+                                  <span class="material-symbols-outlined">star</span>景點評價</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-info.html">
+                                  <span class="material-symbols-outlined">settings</span>會員資料</a>
+                          </li>
+                          <li>
+                              <a class=" d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100"
+                              href="index.html"><span class="material-symbols-outlined">logout</span>登出</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </nav>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>親子好趣處 FunFamilyMap</title>
+</head>
+
+<body>
+
+    <%- include('./layout/header'); -%>
+        <div class="d-lg-none bg-white py-4 text-center z-1 shadow">
+            <h1 class="fs-6  d-flex align-items-center justify-content-center">
+                <span class="material-symbols-outlined icon-filled">star</span>景點評價
+            </h1>
+        </div>
+        <section class="py-lg-14 py-8 bg-light-gray">
+            <div class="container-xl">
+                <div class="row">
+                    <%- include('./layout/user-aside',{user_page:'reviews'}); -%>
+                        <div class="col-lg-9">
+                            <%- include('./layout/user-stats'); -%>
+                                <h5 class="py-3 mb-5 border-bottom">景點評價</h5>
+                                <div class="row row-cols-1 row-cols-lg-2 g-4 reviews-list">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body p-6">
+                                                <div class="star">
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-gray icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-gray icon-filled">star</span>
+                                                </div>
+                                                <h4 class="my-2 text-primary">九九峰動物樂園</h4>
+                                                <div class="fs-7"><span>1個月前</span> 在 <b>南投縣草屯鎮</b></div>
+                                                <hr>
+                                                <p class="text-line-2">
+                                                    園區內的恐龍設施讓孩子們興奮不已,每個角落都充滿了驚喜。雖然戶外區域會有一些蚊蟲,但園區的清潔工作做得非常好,讓人感到舒適。動線的設計讓整個遊玩過程非常流暢。對於怕蟲子的人,防蚊液一定要準備好,但這並不會影響我們對這裡的喜愛。我們肯定還會再來!
+                                                </p>
+                                                <a href="#" class="btn-open_new">
+                                                    <span class="material-symbols-outlined">
+                                                        open_in_new
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body p-6">
+                                                <div class="star">
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                    <span
+                                                        class="material-symbols-outlined text-secondary-600 icon-filled">star</span>
+                                                </div>
+                                                <h4 class="my-2 text-primary">百果山探索樂園</h4>
+                                                <div class="fs-7"><span>1個月前</span> 在 <b>南投縣草屯鎮</b></div>
+                                                <hr>
+                                                <p class="text-line-2">
+                                                    園區的恐龍設施令人印象深刻,驚喜不斷。因為園區靠近山區,昆蟲可能會稍多一些,特別是在戶外區域,所以防蚊措施非常重要。不過,園區的清潔程度很高,動線規劃也很順暢,讓我們玩得非常開心。這是一個我們一定會再來的地方,尤其適合家庭出遊。」
+                                                </p>
+                                                <a href="#" class="btn-open_new">
+                                                    <span class="material-symbols-outlined">
+                                                        open_in_new
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <%- include('./layout/footer'); -%>
+            <script type="module" src="../main.js"></script>
+</body>
+
+</html>
