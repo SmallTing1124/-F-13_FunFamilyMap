@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/F-13_FunFamilyMap/assets/favicon-24d8a4a0.ico" type="image/x-icon">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>親子好趣處 FunFamilyMap</title>
+  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-b76f0a04.js"></script>
+  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-4d76de7e.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg shadow sticky-top w-100 py-lg-4 py-2">
+  <div class="container-xl">
+      <div class="d-flex flex-nowrap  align-items-center w-100 position-relative">
+          <a class="navbar-brand me-xl-12 me-3" href="index.html">
+              <img src="/F-13_FunFamilyMap/assets/logo-67eb97f1.svg" alt="親子好趣處" class="d-none d-lg-block">
+              <img src="/F-13_FunFamilyMap/assets/logo-mini-bbcecf91.svg" alt="親子好趣處" class="d-lg-none">
+              <h1>親子好趣處 FunFamilyMap</h1>
+          </a>
+
+          <form id="searchForm" class="px-lg-4 px-2 rounded-pill ms-lg-0 ms-auto" role="search">
+              <label for="searchInput" class="d-flex align-items-center">
+                  <span class="material-symbols-outlined">search</span>
+              </label>
+              <input class="form-control py-3 px-0" id="searchInput" type="search" placeholder="您想要找什麼景點？"
+                  aria-label="Search">
+          </form>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" data-bs-auto-close="outside"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+
+          <div class="d-none d-lg-inline-flex align-items-center column-gap-xl-6 column-gap-1 ms-auto">
+              <ul class="navbar-nav mb-0 column-gap-xl-6 column-gap-1">
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                  </li>
+              </ul>
+              <div class="d-flex justify-content-center column-gap-lg-lg-4 column-gap-1">
+                  <a href="login.html" class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                  <a href="register.html" class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+              </div>
+              <div class="dropdown">
+                  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" alt="mdo" width="48" height="48"
+                          class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-7 pt-0 pb-4">
+                      <li>
+                          <div class="d-flex align-items-center py-6 px-8">
+                              <div class="flex-shrink-0">
+                                  <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle" alt="user-avatar"
+                                      width="60" height="60">
+                              </div>
+                              <div class="flex-grow-1 ms-3">
+                                  <h6>陳大廷</h6>
+                                  <p class="text-gray-600">userName@mail.com</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider mt-0 mb-4">
+                      </li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-maps.html"><span class="material-symbols-outlined">map</span>我的地圖</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-favorite.html"><span class="material-symbols-outlined">favorite</span>喜愛景點</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-reviews.html"><span class="material-symbols-outlined">star</span>景點評價</a></li>
+                      <li><a class="dropdown-item d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="user-info.html"><span class="material-symbols-outlined">settings</span>會員資料</a></li>
+                      <li>
+                          <hr class="dropdown-divider my-4">
+                      </li>
+                      <li><a class="dropdown-item  d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8"
+                              href="#"><span class="material-symbols-outlined">logout</span>登出</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="d-lg-none">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="nav nav-underline nav-justified w-100 column-gap-0 border-top" id="nav-tab" role="tablist">
+              <li class="nav-item">
+                  <button class="nav-link active" id="nav-menu-group" data-bs-toggle="tab" data-bs-target="#nav-menu"
+                      type="button" role="tab" aria-controls="nav-menu" aria-selected="true">探索</button>
+              </li>
+              <li class="nav-item">
+                  <button class="nav-link" id="nav-member-group" data-bs-toggle="tab" data-bs-target="#nav-member"
+                      type="button" role="tab" aria-controls="nav-member" aria-selected="false">關於我</button>
+              </li>
+          </ul>
+          <div class="tab-content  w-100 h-100" id="nav-tabContent">
+              <div class="tab-pane h-100 fade show active" id="nav-menu" role="tabpanel"
+                  aria-labelledby="nav-menu-group" tabindex="0">
+                  <div class="d-flex flex-column h-100 py-6">
+                      <ul class="navbar-nav mb-0 row-gap-6">
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-spots.html">景點列表</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="contributors.html">景點開拓者</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-center" href="tourist-edit.html">新增景點</a>
+                          </li>
+                      </ul>
+                      <div class="d-flex justify-content-center column-gap-6 px-3 mt-auto border-top py-6 position-absolute bottom-0 w-100">
+                          <a href="login.html"
+                              class="btn rounded-pill btn-sm btn-white w-lg-auto w-100 justify-content-center">登入</a>
+                          <a href="register.html"
+                              class="btn rounded-pill btn-sm btn-primary w-lg-auto w-100 justify-content-center">註冊</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="tab-pane h-100 fade" id="nav-member" role="tabpanel" aria-labelledby="nav-member-group"
+                  tabindex="0">
+                  <div class="h-100">
+                      <ul class="navbar-nav mb-0">
+                          <li>
+                              <div class="d-flex align-items-center py-6 px-8 border-bottom">
+                                  <div class="flex-shrink-0">
+                                      <img src="/F-13_FunFamilyMap/assets/user-avatar-d77653c1.jpg" class="rounded-circle"
+                                          alt="user-avatar" width="60" height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6>陳大廷</h6>
+                                      <p class="text-gray-600">userName@mail.com</p>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-maps.html">
+                                  <span class="material-symbols-outlined">map</span>我的地圖</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-favorite.html">
+                                  <span class="material-symbols-outlined">favorite</span>喜愛景點</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-reviews.html">
+                                  <span class="material-symbols-outlined">star</span>景點評價</a>
+                          </li>
+                          <li>
+                              <a class="d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100" href="user-info.html">
+                                  <span class="material-symbols-outlined">settings</span>會員資料</a>
+                          </li>
+                          <li>
+                              <a class=" d-inline-flex align-items-center link-gray-600 gap-3 py-4 px-8 w-100"
+                              href="index.html"><span class="material-symbols-outlined">logout</span>登出</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+    <section class="Trailblazers" style="background-color: #F5E83A; ">
+        <div class="container-xl carouselOuter">
+            <!-- 1 -->
+            <img class="carousel-box1" src="/F-13_FunFamilyMap/assets/3-1-9023cac6.png" alt="">
+        </div>
+
+        <div class="container-xl" style="display:  none;">
+            <div class="row">
+
+                <!-- con 1 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                        <h4>快樂爸比</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>
+
+                <!-- con 2 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                        <h4>巧手媽咪</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>
+                
+                <!-- con 3 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                        <h4>陽光爸爸</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>
+                
+                <!-- con 4 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                        <h4>甜心媽咪</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>     
+                
+                <!-- con 5 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                        <h4>開心爹地</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>  
+
+                <!-- con 6 -->
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="rounded-box row"  style="position: relative;">
+                        <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                        <h4>小丸子媽</h4>
+                        <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                        <p class="time">最新開拓日・2024-08-15</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+        <!-- 2 pc-->
+        <div id="carouselExampleIndicators" class="carousel slide carouselPc" data-bs-ride="carousel" 
+            >
+
+            <!-- Carousel Dot -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active btn-dot" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="btn-dot" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="btn-dot" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="btn-dot" aria-label="Slide 4"></button>
+            </div>
+
+            <!-- Carousel Content -->
+            <div class="container-xl carousel-inner">
+                <!-- page1 -->
+                <div class="carousel-item active">
+
+                    <div class="row" style="padding-top: 40px;">
+                        
+                        <!-- con 1 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50" >
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                <h4>快樂爸比</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+
+                        <!-- con 2 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                                <h4>巧手媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 3 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                                <h4>陽光爸爸</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 4 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                                <h4>甜心媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>     
+                        
+                        <!-- con 5 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                                <h4>開心爹地</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>  
+
+                        <!-- con 6 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                                <h4>小丸子媽</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <!-- page2 -->
+                <div class="carousel-item">
+
+                    <div class="row" style="padding-top: 40px;">
+                        
+                        <!-- con 1 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50" >
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                <h4>快樂爸比</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+
+                        <!-- con 2 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                                <h4>巧手媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 3 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                                <h4>陽光爸爸</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 4 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                                <h4>甜心媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>     
+                        
+                        <!-- con 5 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                                <h4>開心爹地</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>  
+
+                        <!-- con 6 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                                <h4>小丸子媽</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <!-- page3 -->
+                <div class="carousel-item">
+
+                    <div class="row" style="padding-top: 40px;">
+                        
+                        <!-- con 1 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50" >
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                <h4>快樂爸比</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+
+                        <!-- con 2 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                                <h4>巧手媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 3 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                                <h4>陽光爸爸</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 4 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                                <h4>甜心媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>     
+                        
+                        <!-- con 5 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                                <h4>開心爹地</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>  
+
+                        <!-- con 6 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                                <h4>小丸子媽</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <!-- page4 -->
+                <div class="carousel-item">
+
+                    <div class="row" style="padding-top: 40px;">
+                        
+                        <!-- con 1 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50" >
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                <h4>快樂爸比</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+
+                        <!-- con 2 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                                <h4>巧手媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 3 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                                <h4>陽光爸爸</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- con 4 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                                <h4>甜心媽咪</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>     
+                        
+                        <!-- con 5 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                                <h4>開心爹地</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>  
+
+                        <!-- con 6 -->
+                        <div class="col-md-4 d-flex justify-content-center pad-t50">
+                            <div class="rounded-box row"  style="position: relative;">
+                                <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                                <h4>小丸子媽</h4>
+                                <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                                <p class="time">最新開拓日・2024-08-15</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Carousel Btn left -->
+            <button class="carousel-control-prev btn-circle" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
+            style="left: 10px;">
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_left</span><!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Carousel Btn right -->
+            <button class="carousel-control-next btn-circle" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
+            style="right: 10px;">
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_right</span><!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+        <!-- 2 mb -->
+        <div class="carouselMb">
+            <div id="carouselExampleIndicatorsMB" class="carousel slide carouselPc" data-bs-ride="carousel" 
+            style="display: block;">
+
+            <!-- Carousel Dot -->
+            <div class="carousel-indicators carouselMbBtn">
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="0" class="active btn-dot" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="1" class="btn-dot" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="2" class="btn-dot" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="3" class="btn-dot" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="4" class="btn-dot" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide-to="5" class="btn-dot" aria-label="Slide 6"></button>
+            </div>
+
+            <!-- Carousel Content -->
+            <div class="container-xl carousel-inner">
+                <!-- page1 -->
+                <div class="carousel-item active">
+
+                    <div class="col-md-4 d-flex justify-content-center pad-t50" >
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                            <h4>快樂爸比MB</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- page2 -->
+                <div class="carousel-item">
+
+                    <!-- con 2 -->
+                    <div class="col-md-4 d-flex justify-content-center pad-t50">
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                            <h4>巧手媽咪</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- page3 -->
+                <div class="carousel-item">
+
+                    <!-- con 3 -->
+                    <div class="col-md-4 d-flex justify-content-center pad-t50">
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                            <h4>陽光爸爸</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- page4 -->
+                <div class="carousel-item">
+
+                    <!-- con 4 -->
+                    <div class="col-md-4 d-flex justify-content-center pad-t50">
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                            <h4>甜心媽咪</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>  
+
+                </div>
+                <!-- page5 -->
+                <div class="carousel-item">
+
+                    <!-- con 5 -->
+                    <div class="col-md-4 d-flex justify-content-center pad-t50">
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-4-c9cb221a.png" alt="">
+                            <h4>開心爹地</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>  
+
+                </div>
+
+                <!-- page6 -->
+                <div class="carousel-item">
+
+                    <!-- con 6 -->
+                    <div class="col-md-4 d-flex justify-content-center pad-t50">
+                        <div class="rounded-box row"  style="position: relative;">
+                            <img class="rounded-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                            <h4>小丸子媽</h4>
+                            <p>感謝您 新增  <a href="#新竹市立動物園">新竹市立動物園</a></p>
+                            <p class="time">最新開拓日・2024-08-15</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Carousel Btn left -->
+            <button class="carousel-control-prev btn-circle carouselMbBtn" type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide="prev" >
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_left</span><!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Carousel Btn right -->
+            <button class="carousel-control-next btn-circle carouselMbBtn" type="button" data-bs-target="#carouselExampleIndicatorsMB" data-bs-slide="next">
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_right</span><!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="container-xl carouselBottom">
+            <p class="box1" style="text-align:center">以上是系統記錄的熱心貢獻者名單，感謝大家共同收集和整理資料。</p>
+        </div>
+    </section>
+
+    <section class="RankingList" style="background-color: #FFFFFF; ">
+
+        <div class="container-xl navOuter">
+            <!-- 2 -->
+            <img class="carousel-box1" src="/F-13_FunFamilyMap/assets/3-2-b92b71d0.png" alt="">
+        </div>
+
+        <div class="container-xl d-flex ju-c">
+
+            <!-- 分頁Btn -->
+            <div class="nav nav-tabs">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#menu1" aria-selected="true">最多新增</button>
+                <button class="nav-link " data-bs-toggle="tab" data-bs-target="#menu2" aria-selected="false">最多編修</button>
+                <button class="nav-link " data-bs-toggle="tab" data-bs-target="#menu3" aria-selected="false">最多評價</button>            
+            </div>
+        
+        </div>
+
+        <!-- 分頁Page -->
+        <div class="container-xl tabOut">
+            <!-- 分頁 content -->
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="menu1">
+                    <div class="row" style="padding-bottom: 48px;">
+                        <!-- con 1 -->
+                        <div class="col-md-4 order-md-1 order-2" >
+                            <div class="con-box row" style="margin: 0 auto;">                                
+                                <img class="con-img" src="/F-13_FunFamilyMap/assets/3-4-94c44b39.png" alt="">
+
+                                <div class="con-color con-color2nd"> </div>
+
+                                <div class="con-box2nd">
+                                    <img src="/F-13_FunFamilyMap/assets/avatar-8-45f847c5.png" alt="">
+                                    <h4>甜甜媽</h4>
+                                    <p class="time">最新開拓日・2024-08-15</p>
+                                </div>
+
+                                <div class="con-colorEnd" >
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>新增景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">99</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>編修景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">75</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>景點評價</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">55</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    
+                        <!-- con 2 -->
+                        <div class="col-md-4 order-md-xx order-1">
+                            <div class="con-box row" style="margin: 0 auto;">
+                                <img class="con-img" src="/F-13_FunFamilyMap/assets/3-3-ff2af8f7.png" alt="">
+
+                                <div class="con-color con-color1st"> </div>
+
+                                <div class="con-box1st">
+                                    <img src="/F-13_FunFamilyMap/assets/avatar-7-889ee830.png" alt="">
+                                    <h4 >小羊媽咪</h4>
+                                    <p class="time">最新開拓日・2024-08-15</p>
+                                </div>
+
+                                <div class="con-colorEnd" >
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>新增景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">100</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>編修景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">75</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>景點評價</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">55</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- con 3 -->
+                        <div class="col-md-4 order-md-2 order-3">
+                            <div class="con-box row" style="margin: 0 auto;">
+                                <img class="con-img" src="/F-13_FunFamilyMap/assets/3-5-9f718f12.png" alt="">
+
+                                <div class="con-color con-color3rd"> </div>
+
+                                <div class="con-box3rd">
+                                    <img src="/F-13_FunFamilyMap/assets/avatar-9-3782b9a8.png" alt="">
+                                    <h4>海洋爸爸</h4>
+                                    <p class="time">最新開拓日・2024-08-15</p>
+                                </div> 
+
+                                <div class="con-colorEnd" >
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>新增景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">85</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>編修景點</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">75</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                    <!-- 資料 -->
+                                    <div class="d-flex ju-b box" style="align-items: flex-end;">
+                                        <h6>景點評價</h6>
+                                        <div class="d-flex" style="align-items: flex-end;">
+                                            <h4 style="margin-right: 8px;">55</h4>
+                                            <h6>筆</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- 排行 - 新增景點-->
+
+                    <div class="horizontal-scroll-list">
+                        <div style="overflow-x: auto; ">
+                            <div class="ranking-box" style="border-bottom: 1px solid #8E8E8E;">
+                                <div><h6 class="c1">排行</h6></div>
+                                <div><h6 class="c2">景點開拓者</h6></div>
+                                <div><h6 class="c3">筆數</h6></div>
+                                <div><h6 class="c4">最新開拓日</h6></div>
+                            </div>
+                            <ul style="margin: 0px; padding: 0px; list-style-type: none;">
+                                <!-- overflow-x: auto; list-style-type: none; -->
+                                <li>                               
+                                    <div class="ranking-box">
+                                        <div class="bc"><h4 class="c1">4</h4></div>                                        
+                                        <div>
+                                            <div class="bc c2">
+                                                <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                                <h6 class="">快樂爸比</h6>
+                                            </div>
+                                        </div>                                        
+                                        <div>
+                                            <div class="bc d-flex c3">
+                                                <h6>新增景點</h6>                                        
+                                                <h4 >84</h4>
+                                                <h6>筆</h6>
+                                            </div> 
+                                        </div>
+                                        <div>
+                                            <h6 class="bc c4">最新開拓日・2023-12-10</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="bc c1">5</h4>
+                                        <div class="bc c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-10-d53fff45.png" alt="">
+                                            <h6 class="">冒險寶寶</h6>
+                                        </div>                                        
+                                        <div class="bc d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >81</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="bc c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="c1">6</h4>
+                                        <div class="c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-5-ea2de625.png" alt="">
+                                            <h6 class="">陽光爸爸</h6>
+                                        </div>                                        
+                                        <div class="d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >77</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="c1">7</h4>
+                                        <div class="c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-2-a80dc283.png" alt="">
+                                            <h6 class="">快樂爸比</h6>
+                                        </div>                                        
+                                        <div class="d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >75</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="c1">8</h4>
+                                        <div class="c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-1-eac64fad.png" alt="">
+                                            <h6 class="">小明媽咪</h6>
+                                        </div>                                        
+                                        <div class="d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >65</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="c1">9</h4>
+                                        <div class="c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-3-d7d8fecf.png" alt="">
+                                            <h6 class="">巧手媽咪</h6>
+                                        </div>                                        
+                                        <div class="d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >58</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="ranking-box">
+                                        <h4 class="c1">10</h4>
+                                        <div class="c2">
+                                            <img class="ranking-img" src="/F-13_FunFamilyMap/assets/avatar-6-167d4f53.png" alt="">
+                                            <h6 class="">小丸子媽</h6>
+                                        </div>                                        
+                                        <div class="d-flex c3">
+                                            <h6>新增景點</h6>                                        
+                                            <h4 >40</h4>
+                                            <h6>筆</h6>
+                                        </div>                                        
+                                        <h6 class="c4">最新開拓日・2023-12-10</h6>
+                                     </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane fade show " id="menu2">
+                    <div>132</div>
+                </div>
+                <div class="tab-pane fade show " id="menu3">
+                    <div>132</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="container-xl ">
+            <div class="c">
+
+                
+            </div>
+        </div>
+        
+
+
+    </section>
+
+    <footer class="bg-primary py-lg-12 py-6">
+    <div class="container-xl">
+        <div class="row justify-content-between ">
+            <div class="col-lg-6 text-lg-start text-center">
+                <ul class="list-unstyled d-inline-flex align-items-center text-white mb-lg-0 mb-2">
+                    <li><a href="" class="d-block py-2 link-white">服務政策</a></li><span class="mx-6">｜</span>
+                    <li><a href="" class="d-block py-2 link-white">隱私條款</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-lg-end  text-center text-white"><span class="fs-lg-6 fs-7">© 2024 親子好趣處
+                    FunFamilyMap. All rights reserved.</span></div>
+        </div>
+    </div>
+</footer>    
+</body>
+
+</html>
