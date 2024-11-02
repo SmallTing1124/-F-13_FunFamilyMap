@@ -4,9 +4,11 @@
     column-gap: 4px;
     border-radius: $border-radius-pill;
     font-weight: 400;
+    border: 1px solid $normal-gray;
 
     &:hover {
         background-color: $secondary;
+        border-color: $secondary;
     }
 
     &-add {
