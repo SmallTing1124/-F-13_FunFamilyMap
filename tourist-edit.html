@@ -9,8 +9,8 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>親子好趣處 FunFamilyMap</title>
-  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-6b4b3ad3.js"></script>
-  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-d0261276.css">
+  <script type="module" crossorigin src="/F-13_FunFamilyMap/assets/main-a7bb6a20.js"></script>
+  <link rel="stylesheet" href="/F-13_FunFamilyMap/assets/main-0d054264.css">
 </head>
 
 <body>
@@ -173,10 +173,10 @@
           </div>
       </div>
   </div>
-</nav>    <section class="p-lg-15 p-12 bg-normal-gray tourist-edit">
+</nav>    <section class="p-lg-15 p-0 py-13  bg-normal-gray tourist-edit">
       <!-- title -->
       <div class="container">
-        <div class="bg-white rounded px-10">
+        <div class="bg-white rounded px-lg-10 px-3">
           <div class="tourist-add mt-7 pb-5 position-relative">
             <div class="tourist-add-title d-flex flex-column align-items-center">
               <img class="position-absolute" src="/F-13_FunFamilyMap/assets/Open-6813d4ea.svg" alt="" />
@@ -186,10 +186,10 @@
               </div>
             </div>
           </div>
-          <h3 class="add-tourist-form-title font-NaniFont">
+          <h3 class="add-tourist-form-title font-NaniFont text-lg-start text-center">
             <b class="bg-secondary text-primary">景點資訊</b>
           </h3>
-          <div class="add-tourist-form pt-5 g-3  pb-lg-14 pb-7">
+          <div class="add-tourist-form g-3 pb-lg-14 pt-5  pb-1">
             <form>
               <div class="row mb-4">
                 <label for="inputTouristName" class="col-md-2 col-form-label">景點名稱<span class="text-danger">*</span>
@@ -205,10 +205,48 @@
                 <div class="col-md-10">
                   <div class="row g-2">
                     <div class="col-md-6">
-                      <input type="text" class="form-control  rounded-1" id="inputCity" placeholder="縣市" />
+                      <select class="form-select rounded-1" aria-label="Default select example" id="inputCity">
+                        <option selected>選擇景點縣市</option>
+                        <option value="台北市">台北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="台中市">台中市</option>
+                        <option value="台南市">台南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="台東縣">台東縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="連江縣（馬祖）">連江縣（馬祖）</option>
+                      </select>
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control  rounded-1" id="inputDistrict" placeholder="區域" />
+                      <select class="form-select rounded-1" aria-label="Default select example" id="inputDistrict">
+                        <option selected>選擇景點地區</option>
+                        <option value="1">中正區</option>
+                        <option value="2">大同區</option>
+                        <option value="3">中山區</option>
+                        <option value="1">松山區</option>
+                        <option value="2">大安區</option>
+                        <option value="3">萬華區</option>
+                        <option value="1">信義區</option>
+                        <option value="2">士林區</option>
+                        <option value="3">北投區</option>
+                        <option value="1">內湖區</option>
+                        <option value="2">南港區</option>
+                        <option value="3">文山區</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -274,11 +312,51 @@
                   </div>
                 </div>
               </div>
+              <div class="row align-items-center mb-4">
+                <label for="potCategory" class="col-md-2 col-form-label">
+                  景點類別<span class="text-danger">*</span>
+                </label>
+                <div class="col-md-10">
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <select class="form-select rounded-1" id="inputCity">
+                        <option selected>選擇景點類別</option>
+                        <option value="自然景觀">自然景觀</option>
+                        <option value="探索學習">探索學習</option>
+                        <option value="戶外活動">戶外活動</option>
+                        <option value="娛樂設施">娛樂設施</option>
+                        <option value="休閒遊憩">休閒遊憩</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <select class="form-select rounded-1" id="inputDistrict">
+                        <option selected>選擇景點項目</option>
+                        <option value="海邊">海邊</option>
+                        <option value="河邊">河邊</option>
+                        <option value="爬山">爬山</option>
+                        <option value="森林">森林</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label for="suitableAge" class="col-md-2 col-form-label">適合年紀<span class="text-danger">*</span></label>
+                <div class="col-md-10">
+                  <input type="number" class="form-control rounded-1" id="suitableAge" name="suitableAge" min="0" max="12" placeholder="請填寫最小適合年紀">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label for="expenseAmount" class="col-md-2 col-form-label">消費金額<span class="text-danger">*</span></label>
+                <div class="col-md-10">
+                  <input type="number" class="form-control rounded-1" id="expenseAmount" name="expenseAmount" placeholder="請填寫消費金額" min="0">
+                </div>
+              </div>
               <div class="row mb-4">
                 <label for="inputNearbyFacilitiese" class="col-md-2 col-form-label">
                   周邊環境<span class="text-danger">*</span>
                 </label>
-                <div class="col-md-10">
+                <div class="col-md-10 d-flex flex-wrap gap-2">
                   <div class="form-check form-check-inline btn-form-check">
                     <input class="form-check-input" type="checkbox" value="parking" id="NearbyParking">
                     <label class="form-check-label" for="NearbyParking">
@@ -308,7 +386,7 @@
               <div class="row mb-4">
                 <label for="inputTransport" class="col-md-2 col-form-label">交通工具<span
                     class="text-danger">*</span></label>
-                <div class="col-md-10">
+                <div class="col-md-10 d-flex flex-wrap gap-2">
                   <div class="form-check form-check-inline btn-form-check">
                     <input class="form-check-input" type="checkbox" value="parking" id="transportMetro">
                     <label class="form-check-label" for="transportMetro">
@@ -386,7 +464,7 @@
                     max="300" rows="5"></textarea>
                 </div>
               </div>
-              <h3 class="add-tourist-form-title font-NaniFont">
+              <h3 class="add-tourist-form-title font-NaniFont text-lg-start text-center">
                 <b class="bg-secondary text-primary">景點圖片</b>
               </h3>
              
@@ -420,16 +498,16 @@
                       class="material-symbols-outlined">add_circle</span>
                     新增補充照片</label>
                   <input class="form-control d-none" type="file" id="multipleImgFile" multiple>
-                  <div class="row gy-2">
-                    <div class="col-md-4">
+                  <div class="row g-2">
+                    <div class="col-md-4 col-6">
 
                       <img class="img-fluid" src="/F-13_FunFamilyMap/assets/attraction_1-31909a78.jpg" alt="">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
 
                       <img class="img-fluid" src="/F-13_FunFamilyMap/assets/attraction_1-31909a78.jpg" alt="">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
 
                       <img class="img-fluid" src="/F-13_FunFamilyMap/assets/attraction_1-31909a78.jpg" alt="">
                     </div>
