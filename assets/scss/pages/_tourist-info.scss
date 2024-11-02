@@ -26,7 +26,8 @@
   vertical-align: middle;
 }
 
-.tourist-information {
+.tourist-information,
+.tourist-evaluate {
   background-color: #ffffff;
   background-image: url(/assets/images/tourist/grid-paper.png);
   background-size: contain;
@@ -34,6 +35,23 @@
 .tourist-detail,
 .tourist-evaluate {
   background-size: auto;
+}
+.score {
+  font-size: 40px;
+  color: #ffffff;
+  padding: 30px 23px;
+}
+.evaluate-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.evaluate-list-item {
+  margin: 16px 0;
+  border: 1px solid $gray-400;
+}
+.evaluate-title {
+  top: 265px;
 }
 @media screen and (max-width: 991px) {
   .tourist-info-swiper {
