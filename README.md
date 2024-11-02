@@ -1,4 +1,5 @@
-# 網頁切版直播班 Vite 範例
+# 親子好趣處 FunFamilyMap
+## 六角學院 2024 切版直播專題
 
 ## Node.js 版本
   - 專案的 Node.js 版本需為 v16 以上
